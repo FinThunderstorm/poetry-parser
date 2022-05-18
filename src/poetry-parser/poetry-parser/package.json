@@ -1,0 +1,51 @@
+{
+    "name": "poetry_parser",
+    "version": "0.0.1",
+    "description": "Parser for poetry.lock files",
+    "main": "app.js",
+    "repository": "",
+    "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
+    "license": "",
+    "scripts": {
+        "prepare": "cd ../../.. && husky install src/poetry-parser/poetry-parser/.husky",
+        "test": "NODE_ENV=test jest --verbose",
+        "test:coverage": "NODE_ENV=test jest --coverage --collectCoverageFrom=./**.{js,jsx}",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prettier": "npx prettier --write .",
+        "prettier:ci": "npx prettier --check ."
+    },
+    "devDependencies": {
+        "eslint": "^8.15.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest": "^26.2.2",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^8.0.1",
+        "jest": "^28.1.0",
+        "lint-staged": "^12.4.1",
+        "prettier": "2.6.2"
+    },
+    "prettier": {
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 4
+    },
+    "jest": {
+        "coveragePathIgnorePatterns": [
+            "/coverage/",
+            "/node_modules/",
+            "/.husky/"
+        ]
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint:fix",
+            "npm run prettier"
+        ],
+        "*.json": [
+            "npm run prettier"
+        ]
+    }
+}
