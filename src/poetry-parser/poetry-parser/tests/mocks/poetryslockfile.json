@@ -1,0 +1,951 @@
+[
+    {
+        "name": "atomicwrites",
+        "description": "Atomic file writes.",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"]
+    },
+    {
+        "name": "attrs",
+        "description": "Classes Without Boilerplate",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "extras": [
+            {
+                "dev": [
+                    "coverage[toml]",
+                    "hypothesis",
+                    "pympler",
+                    "pytest",
+                    "six",
+                    "mypy",
+                    "pytest-mypy-plugins",
+                    "zope.interface",
+                    "furo",
+                    "sphinx",
+                    "sphinx-notfound-page",
+                    "pre-commit",
+                    "cloudpickle"
+                ]
+            },
+            {
+                "docs": [
+                    "furo",
+                    "sphinx",
+                    "zope.interface",
+                    "sphinx-notfound-page"
+                ]
+            },
+            {
+                "tests": [
+                    "coverage[toml]",
+                    "hypothesis",
+                    "pympler",
+                    "pytest",
+                    "six",
+                    "mypy",
+                    "pytest-mypy-plugins",
+                    "zope.interface",
+                    "cloudpickle"
+                ]
+            },
+            {
+                "tests_no_zope": [
+                    "coverage[toml]",
+                    "hypothesis",
+                    "pympler",
+                    "pytest",
+                    "six",
+                    "mypy",
+                    "pytest-mypy-plugins",
+                    "cloudpickle"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "cachecontrol",
+        "description": "httplib2 caching for requests",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["lockfile", "msgpack", "requests"],
+        "extras": [
+            {
+                "filecache": ["lockfile"]
+            },
+            {
+                "redis": ["redis"]
+            }
+        ]
+    },
+    {
+        "name": "cachy",
+        "description": "Cachy provides a simple yet effective caching library.",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
+        "extras": [
+            {
+                "redis": ["redis"]
+            },
+            {
+                "memcached": ["python-memcached"]
+            },
+            {
+                "msgpack": ["msgpack-python"]
+            }
+        ]
+    },
+    {
+        "name": "certifi",
+        "description": "Python package for providing Mozilla's CA Bundle.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "cffi",
+        "description": "Foreign Function Interface for Python calling C code.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": ["pycparser"]
+    },
+    {
+        "name": "cfgv",
+        "description": "Validate configuration and produce human readable error messages.",
+        "optional": "false",
+        "pythonVersions": [">=3.6.1"]
+    },
+    {
+        "name": "charset-normalizer",
+        "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+        "optional": "false",
+        "pythonVersions": [">=3.5.0"],
+        "extras": [
+            {
+                "unicode_backport": ["unicodedata2"]
+            }
+        ]
+    },
+    {
+        "name": "cleo",
+        "description": "Cleo allows you to create beautiful and testable command-line interfaces.",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"],
+        "dependencies": ["crashtest", "pylev"]
+    },
+    {
+        "name": "colorama",
+        "description": "Cross-platform colored terminal text.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ]
+    },
+    {
+        "name": "coverage",
+        "description": "Code coverage measurement for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "toml": ["tomli"]
+            }
+        ]
+    },
+    {
+        "name": "crashtest",
+        "description": "Manage Python errors with ease",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"]
+    },
+    {
+        "name": "cryptography",
+        "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["cffi"],
+        "extras": [
+            {
+                "docs": ["sphinx", "sphinx-rtd-theme"]
+            },
+            {
+                "docstest": ["pyenchant", "twine", "sphinxcontrib-spelling"]
+            },
+            {
+                "pep8test": [
+                    "black",
+                    "flake8",
+                    "flake8-import-order",
+                    "pep8-naming"
+                ]
+            },
+            {
+                "sdist": ["setuptools_rust"]
+            },
+            {
+                "ssh": ["bcrypt"]
+            },
+            {
+                "test": [
+                    "pytest",
+                    "pytest-benchmark",
+                    "pytest-cov",
+                    "pytest-subtests",
+                    "pytest-xdist",
+                    "pretend",
+                    "iso8601",
+                    "pytz",
+                    "hypothesis"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "deepdiff",
+        "description": "Deep Difference and Search of any Python object/data.",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["ordered-set"],
+        "extras": [
+            {
+                "cli": ["click", "pyyaml", "toml", "clevercsv"]
+            }
+        ]
+    },
+    {
+        "name": "distlib",
+        "description": "Distribution utilities",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "dulwich",
+        "description": "Python Git Library",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["certifi", "urllib3"],
+        "extras": [
+            {
+                "fastimport": ["fastimport"]
+            },
+            {
+                "https": ["urllib3[secure]"]
+            },
+            {
+                "pgp": ["gpg"]
+            },
+            {
+                "watch": ["pyinotify"]
+            }
+        ]
+    },
+    {
+        "name": "entrypoints",
+        "description": "Discover and load entry points from installed packages.",
+        "optional": "false",
+        "pythonVersions": [">=2.7"]
+    },
+    {
+        "name": "filelock",
+        "description": "A platform independent file lock.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "docs": ["furo", "sphinx", "sphinx-autodoc-typehints"]
+            },
+            {
+                "testing": [
+                    "covdefaults",
+                    "coverage",
+                    "pytest",
+                    "pytest-cov",
+                    "pytest-timeout"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "flatdict",
+        "description": "Python module for interacting with nested dicts as a single level dict with delimited keys.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "html5lib",
+        "description": "HTML parser based on the WHATWG HTML specification",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": ["six", "webencodings"],
+        "extras": [
+            {
+                "all": ["genshi", "chardet", "lxml"]
+            },
+            {
+                "chardet": ["chardet"]
+            },
+            {
+                "genshi": ["genshi"]
+            },
+            {
+                "lxml": ["lxml"]
+            }
+        ]
+    },
+    {
+        "name": "httpretty",
+        "description": "HTTP client mock for Python",
+        "optional": "false",
+        "pythonVersions": [">=3"]
+    },
+    {
+        "name": "identify",
+        "description": "File identification library for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "license": ["ukkonen"]
+            }
+        ]
+    },
+    {
+        "name": "idna",
+        "description": "Internationalized Domain Names in Applications (IDNA)",
+        "optional": "false",
+        "pythonVersions": [">=3.5"]
+    },
+    {
+        "name": "importlib-metadata",
+        "description": "Read metadata from Python packages",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": ["typing-extensions", "zipp"],
+        "extras": [
+            {
+                "docs": ["sphinx", "jaraco.packaging", "rst.linker"]
+            },
+            {
+                "perf": ["ipython"]
+            },
+            {
+                "testing": [
+                    "pytest",
+                    "pytest-checkdocs",
+                    "pytest-flake8",
+                    "pytest-cov",
+                    "pytest-enabler",
+                    "packaging",
+                    "pyfakefs",
+                    "flufl.flake8",
+                    "pytest-perf",
+                    "pytest-black",
+                    "pytest-mypy",
+                    "importlib-resources"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "iniconfig",
+        "description": "iniconfig: brain-dead simple config-ini parsing",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "jeepney",
+        "description": "Low-level, pure Python DBus protocol wrapper.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "test": [
+                    "pytest",
+                    "pytest-trio",
+                    "pytest-asyncio",
+                    "testpath",
+                    "trio",
+                    "async-timeout"
+                ]
+            },
+            {
+                "trio": ["trio", "async-generator"]
+            }
+        ]
+    },
+    {
+        "name": "keyring",
+        "description": "Store and access your passwords safely.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": [
+            "importlib-metadata",
+            "jeepney",
+            "pywin32-ctypes",
+            "SecretStorage"
+        ],
+        "extras": [
+            {
+                "docs": [
+                    "sphinx",
+                    "jaraco.packaging",
+                    "rst.linker",
+                    "jaraco.tidelift"
+                ]
+            },
+            {
+                "testing": [
+                    "pytest",
+                    "pytest-checkdocs",
+                    "pytest-flake8",
+                    "pytest-cov",
+                    "pytest-enabler",
+                    "pytest-black",
+                    "pytest-mypy"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "lockfile",
+        "description": "Platform-independent file locking module",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "msgpack",
+        "description": "MessagePack (de)serializer.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "mypy",
+        "description": "Optional static typing for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": [
+            "mypy-extensions",
+            "tomli",
+            "typed-ast",
+            "typing-extensions"
+        ],
+        "extras": [
+            {
+                "dmypy": ["psutil"]
+            },
+            {
+                "python2": ["typed-ast"]
+            },
+            {
+                "reports": ["lxml"]
+            }
+        ]
+    },
+    {
+        "name": "mypy-extensions",
+        "description": "Experimental type system extensions for programs checked with the mypy typechecker.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "nodeenv",
+        "description": "Node.js virtual environment builder",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "ordered-set",
+        "description": "An OrderedSet is a custom MutableSet that remembers its order, so that every",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "dev": ["pytest", "black", "mypy"]
+            }
+        ]
+    },
+    {
+        "name": "packaging",
+        "description": "Core utilities for Python packages",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["pyparsing"]
+    },
+    {
+        "name": "pexpect",
+        "description": "Pexpect allows easy control of interactive console applications.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": ["ptyprocess"]
+    },
+    {
+        "name": "pkginfo",
+        "description": "Query metadatdata from sdists / bdists / installed packages.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "extras": [
+            {
+                "testing": ["coverage", "nose"]
+            }
+        ]
+    },
+    {
+        "name": "platformdirs",
+        "description": "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\".",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "docs": [
+                    "furo",
+                    "proselint",
+                    "sphinx-autodoc-typehints",
+                    "sphinx"
+                ]
+            },
+            {
+                "test": ["appdirs", "pytest-cov", "pytest-mock", "pytest"]
+            }
+        ]
+    },
+    {
+        "name": "pluggy",
+        "description": "plugin and hook calling mechanisms for python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["importlib-metadata"],
+        "extras": [
+            {
+                "dev": ["pre-commit", "tox"]
+            },
+            {
+                "testing": ["pytest", "pytest-benchmark"]
+            }
+        ]
+    },
+    {
+        "name": "poetry-core",
+        "description": "Poetry PEP 517 Build Backend",
+        "optional": "false",
+        "pythonVersions": [">=3.7", "<4.0"],
+        "dependencies": ["importlib-metadata"]
+    },
+    {
+        "name": "poetry-plugin-export",
+        "description": "Poetry plugin to export the dependencies to various formats",
+        "optional": "false",
+        "pythonVersions": [">=3.7", "<4.0"],
+        "dependencies": ["poetry"]
+    },
+    {
+        "name": "pre-commit",
+        "description": "A framework for managing and maintaining multi-language pre-commit hooks.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": [
+            "cfgv",
+            "identify",
+            "importlib-metadata",
+            "nodeenv",
+            "pyyaml",
+            "toml",
+            "virtualenv"
+        ]
+    },
+    {
+        "name": "ptyprocess",
+        "description": "Run a subprocess in a pseudo terminal",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "py",
+        "description": "library with cross-python path, ini-parsing, io, code, log facilities",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ]
+    },
+    {
+        "name": "pycparser",
+        "description": "C parser in Python",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"]
+    },
+    {
+        "name": "pylev",
+        "description": "A pure Python Levenshtein implementation that's not freaking GPL'd.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "pyparsing",
+        "description": "pyparsing module - Classes and methods to define and execute parsing grammars",
+        "optional": "false",
+        "pythonVersions": [">=3.6.8"],
+        "extras": [
+            {
+                "diagrams": ["railroad-diagrams", "jinja2"]
+            }
+        ]
+    },
+    {
+        "name": "pytest",
+        "description": "pytest: simple powerful testing with Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": [
+            "atomicwrites",
+            "attrs",
+            "colorama",
+            "importlib-metadata",
+            "iniconfig",
+            "packaging",
+            "pluggy",
+            "py",
+            "toml"
+        ],
+        "extras": [
+            {
+                "testing": [
+                    "argcomplete",
+                    "hypothesis",
+                    "mock",
+                    "nose",
+                    "requests",
+                    "xmlschema"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "pytest-cov",
+        "description": "Pytest plugin for measuring coverage.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": ["coverage", "pytest", "toml"],
+        "extras": [
+            {
+                "testing": [
+                    "fields",
+                    "hunter",
+                    "process-tests",
+                    "six",
+                    "pytest-xdist",
+                    "virtualenv"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "pytest-mock",
+        "description": "Thin-wrapper around the mock package for easier use with pytest",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": ["pytest"],
+        "extras": [
+            {
+                "dev": ["pre-commit", "tox", "pytest-asyncio"]
+            }
+        ]
+    },
+    {
+        "name": "pytest-sugar",
+        "description": "pytest-sugar is a plugin for pytest that changes the default look and feel of pytest (e.g. progressbar, show tests that fail instantly).",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": ["packaging", "pytest", "termcolor"]
+    },
+    {
+        "name": "pywin32-ctypes",
+        "description": "",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "pyyaml",
+        "description": "YAML parser and emitter for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"]
+    },
+    {
+        "name": "requests",
+        "description": "Python HTTP for Humans.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            "!=3.5.*"
+        ],
+        "dependencies": ["certifi", "charset-normalizer", "idna", "urllib3"],
+        "extras": [
+            {
+                "socks": ["PySocks", "win-inet-pton"]
+            },
+            {
+                "use_chardet_on_py3": ["chardet"]
+            }
+        ]
+    },
+    {
+        "name": "requests-toolbelt",
+        "description": "A utility belt for advanced users of python-requests",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": ["requests"]
+    },
+    {
+        "name": "secretstorage",
+        "description": "Python bindings to FreeDesktop.org Secret Service API",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": ["cryptography", "jeepney"]
+    },
+    {
+        "name": "shellingham",
+        "description": "Tool to Detect Surrounding Shell",
+        "optional": "false",
+        "pythonVersions": ["!=3.0", "!=3.1", "!=3.2", "!=3.3", ">=2.6"]
+    },
+    {
+        "name": "six",
+        "description": "Python 2 and 3 compatibility utilities",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*"]
+    },
+    {
+        "name": "termcolor",
+        "description": "ANSII Color formatting for output in terminal.",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "toml",
+        "description": "Python Library for Tom's Obvious, Minimal Language",
+        "optional": "false",
+        "pythonVersions": [">=2.6", "!=3.0.*", "!=3.1.*", "!=3.2.*"]
+    },
+    {
+        "name": "tomli",
+        "description": "A lil' TOML parser",
+        "optional": "false",
+        "pythonVersions": [">=3.7"]
+    },
+    {
+        "name": "tomlkit",
+        "description": "Style preserving TOML library",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"]
+    },
+    {
+        "name": "tox",
+        "description": "tox is a generic virtualenv management and test command line tool",
+        "optional": "false",
+        "pythonVersions": [
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            ">=2.7"
+        ],
+        "dependencies": [
+            "colorama",
+            "filelock",
+            "importlib-metadata",
+            "packaging",
+            "pluggy",
+            "py",
+            "six",
+            "toml",
+            "virtualenv"
+        ],
+        "extras": [
+            {
+                "docs": [
+                    "pygments-github-lexers",
+                    "sphinx",
+                    "sphinxcontrib-autoprogram",
+                    "towncrier"
+                ]
+            },
+            {
+                "testing": [
+                    "flaky",
+                    "freezegun",
+                    "pytest",
+                    "pytest-cov",
+                    "pytest-mock",
+                    "pytest-randomly",
+                    "psutil",
+                    "pathlib2"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "typed-ast",
+        "description": "a fork of Python 2 and 3 ast modules with type comment support",
+        "optional": "false",
+        "pythonVersions": [">=3.6"]
+    },
+    {
+        "name": "types-requests",
+        "description": "Typing stubs for requests",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": ["types-urllib3"]
+    },
+    {
+        "name": "types-urllib3",
+        "description": "Typing stubs for urllib3",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "typing-extensions",
+        "description": "Backported and Experimental Type Hints for Python 3.7+",
+        "optional": "false",
+        "pythonVersions": [">=3.7"]
+    },
+    {
+        "name": "urllib3",
+        "description": "HTTP library with thread-safe connection pooling, file post, and more.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            "<4"
+        ],
+        "extras": [
+            {
+                "brotli": ["brotlicffi", "brotli", "brotlipy"]
+            },
+            {
+                "secure": [
+                    "pyOpenSSL",
+                    "cryptography",
+                    "idna",
+                    "certifi",
+                    "ipaddress"
+                ]
+            },
+            {
+                "socks": ["PySocks"]
+            }
+        ]
+    },
+    {
+        "name": "virtualenv",
+        "description": "Virtual Python Environment builder",
+        "optional": "false",
+        "pythonVersions": [
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            ">=2.7"
+        ],
+        "dependencies": [
+            "distlib",
+            "filelock",
+            "importlib-metadata",
+            "platformdirs",
+            "six"
+        ],
+        "extras": [
+            {
+                "docs": [
+                    "proselint",
+                    "sphinx",
+                    "sphinx-argparse",
+                    "sphinx-rtd-theme",
+                    "towncrier"
+                ]
+            },
+            {
+                "testing": [
+                    "coverage",
+                    "coverage-enable-subprocess",
+                    "flaky",
+                    "pytest",
+                    "pytest-env",
+                    "pytest-freezegun",
+                    "pytest-mock",
+                    "pytest-randomly",
+                    "pytest-timeout",
+                    "packaging"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "webencodings",
+        "description": "Character encoding aliases for legacy web content",
+        "optional": "false",
+        "pythonVersions": ["*"]
+    },
+    {
+        "name": "zipp",
+        "description": "Backport of pathlib-compatible object wrapper for zip files",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "extras": [
+            {
+                "docs": ["sphinx", "jaraco.packaging", "rst.linker"]
+            },
+            {
+                "testing": [
+                    "pytest",
+                    "pytest-checkdocs",
+                    "pytest-flake8",
+                    "pytest-cov",
+                    "pytest-enabler",
+                    "jaraco.itertools",
+                    "func-timeout",
+                    "pytest-black",
+                    "pytest-mypy"
+                ]
+            }
+        ]
+    }
+]

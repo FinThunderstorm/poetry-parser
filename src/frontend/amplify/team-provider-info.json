@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-poetryparser-dev-150550-authRole",
+            "UnauthRoleArn": "arn:aws:iam::611129769464:role/amplify-poetryparser-dev-150550-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::611129769464:role/amplify-poetryparser-dev-150550-authRole",
+            "Region": "eu-north-1",
+            "DeploymentBucketName": "amplify-poetryparser-dev-150550-deployment",
+            "UnauthRoleName": "amplify-poetryparser-dev-150550-unauthRole",
+            "StackName": "amplify-poetryparser-dev-150550",
+            "StackId": "arn:aws:cloudformation:eu-north-1:611129769464:stack/amplify-poetryparser-dev-150550/08314810-d76c-11ec-89c7-0e2256bae888",
+            "AmplifyAppId": "du3mi3z62ze0j"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "du3mi3z62ze0j",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
