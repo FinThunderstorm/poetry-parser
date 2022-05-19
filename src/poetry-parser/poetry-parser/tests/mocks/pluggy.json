@@ -1,0 +1,15 @@
+{
+    "name": "pluggy",
+    "description": "plugin and hook calling mechanisms for python",
+    "optional": "false",
+    "pythonVersions": [">=3.6"],
+    "dependencies": ["importlib-metadata"],
+    "extras": [
+        {
+            "dev": ["pre-commit", "tox"]
+        },
+        {
+            "testing": ["pytest", "pytest-benchmark"]
+        }
+    ]
+}

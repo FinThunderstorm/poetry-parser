@@ -7,7 +7,7 @@
     "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
     "license": "",
     "scripts": {
-        "prepare": "cd ../../.. && husky install src/poetry-parser/poetry-parser/.husky",
+        "husky": "cd ../../.. && husky install src/poetry-parser/poetry-parser/.husky",
         "test": "NODE_ENV=test jest --verbose",
         "test:coverage": "NODE_ENV=test jest --coverage --collectCoverageFrom=./**.{js,jsx}",
         "lint": "eslint .",

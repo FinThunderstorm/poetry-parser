@@ -1,0 +1,6 @@
+{
+    "name": "idna",
+    "description": "Internationalized Domain Names in Applications (IDNA)",
+    "optional": "false",
+    "pythonVersions": [">=3.5"]
+}
