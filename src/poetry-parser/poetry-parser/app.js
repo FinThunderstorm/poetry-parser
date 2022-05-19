@@ -26,6 +26,8 @@ exports.lambdaHandler = async (event, context) => {
             .filter((value) => value !== '')
             .at(-1)
 
+        // eslint-disable-next-line no-console
+        console.log(JSON.stringify(lockFile, null, 2))
         const packages = parseFile(lockFile)
 
         response = {
