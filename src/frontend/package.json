@@ -1,0 +1,94 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@aws-sdk/client-api-gateway": "^3.94.0",
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@mui/base": "^5.0.0-alpha.81",
+        "@mui/icons-material": "^5.8.0",
+        "@mui/lab": "^5.0.0-alpha.82",
+        "@mui/material": "^5.8.0",
+        "aws-amplify": "^4.3.22",
+        "axios": "^0.27.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^8.0.1",
+        "react-router-dom": "^6.3.0",
+        "react-scripts": "5.0.1",
+        "react-test-renderer": "^17.0.2",
+        "redux": "^4.2.0",
+        "redux-thunk": "^2.4.1",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^12.1.4",
+        "cypress": "^9.6.1",
+        "eslint": "^8.15.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.30.0",
+        "eslint-plugin-react-hooks": "^4.5.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^12.4.1",
+        "prettier": "^2.6.2"
+    },
+    "scripts": {
+        "husky": "cd ../.. && husky install src/frontend/.husky",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "CI=true react-scripts test",
+        "test:coverage": "CI=true react-scripts test --coverage",
+        "test:e2e": "cypress run",
+        "eject": "react-scripts eject",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prettier": "npx prettier --write .",
+        "prettier:ci": "npx prettier --check .",
+        "cypress:open": "cypress open",
+        "updatesnapshots": "jest --updateSnapshot --passWithNoTests"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "prettier": {
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 4
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint:fix",
+            "npm run prettier"
+        ],
+        "*.jsx": [
+            "npm run lint:fix",
+            "npm run prettier",
+            "npm run updatesnapshots"
+        ],
+        "*.json": [
+            "npm run prettier"
+        ]
+    }
+}
