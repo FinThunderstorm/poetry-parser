@@ -56,6 +56,11 @@ exports.lambdaHandler = async (event, context) => {
             throw new BodyException('Empty Body')
         }
 
+        if (event.params) {
+            // eslint-disable-next-line no-param-reassign
+            event.body = Buffer.from(event.body, 'base64').toString()
+        }
+
         if (event.headers['Content-Type'] === undefined) {
             throw new ContentTypeException('Content-Type Header Missing')
         }
