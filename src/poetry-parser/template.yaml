@@ -11,20 +11,46 @@ Globals:
     Timeout: 3
 
 Resources:
+  PoetryParserApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: prod
+      CorsConfiguration:
+        AllowOrigins:
+          - "*"
+        AllowHeaders:
+          - "Access-Control-Allow-Origin"
+          - "Content-Type"
+          - "X-Requested-With"
+        AllowMethods:
+          - POST
+          - OPTIONS
+  PoetryParserRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
   PoetryParserFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: poetry-parser/
       Handler: app.lambdaHandler
       Runtime: nodejs16.x
-      Architectures:
-        - x86_64
+      Role: !GetAtt PoetryParserRole.Arn
       Events:
         PoetryParser:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Type: HttpApi # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /parse
             Method: post
+            ApiId: !Ref PoetryParserApi
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
@@ -32,10 +58,7 @@ Outputs:
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
   PoetryParserApi:
     Description: "API Gateway endpoint URL for production stage for Poetry Parse function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/production/parse/"
+    Value: !Sub "https://${PoetryParserApi}.execute-api.${AWS::Region}.amazonaws.com/prod/parse/"
   PoetryParserFunction:
     Description: "Poetry Parser Lambda Function ARN"
     Value: !GetAtt PoetryParserFunction.Arn
-  PoetryParserFunctionIamRole:
-    Description: "Implicit IAM Role created for Poetry Parser function"
-    Value: !GetAtt PoetryParserFunctionRole.Arn

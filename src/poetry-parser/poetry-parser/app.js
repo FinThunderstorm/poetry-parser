@@ -1,14 +1,14 @@
 /* eslint-disable max-classes-per-file */
 const { parseFile } = require('./utils/parser')
 
-// class ContentTypeException extends Error {
-//     constructor(message) {
-//         super(message)
-//         this.name = 'ContentTypeException'
-//         this.statusCode = 400
-//         this.extMessage = '400 Bad Request'
-//     }
-// }
+class ContentTypeException extends Error {
+    constructor(message) {
+        super(message)
+        this.name = 'ContentTypeException'
+        this.statusCode = 400
+        this.extMessage = '400 Bad Request'
+    }
+}
 
 class BodyException extends Error {
     constructor(message) {
@@ -56,31 +56,31 @@ exports.lambdaHandler = async (event, context) => {
             throw new BodyException('Empty Body')
         }
 
-        // if (event.headers['Content-Type'] === undefined) {
-        //     throw new ContentTypeException('Content-Type Header Missing')
-        // }
-        // const contentTypeHeader = event.headers['Content-Type'].split(/; /)
+        if (event.headers['Content-Type'] === undefined) {
+            throw new ContentTypeException('Content-Type Header Missing')
+        }
+        const contentTypeHeader = event.headers['Content-Type'].split(/; /)
 
-        // if (contentTypeHeader.length !== 2) {
-        //     throw new ContentTypeException(
-        //         'Content-Type Header Information Incorrect'
-        //     )
-        // }
+        if (contentTypeHeader.length !== 2) {
+            throw new ContentTypeException(
+                'Content-Type Header Information Incorrect'
+            )
+        }
 
-        // const contentType = contentTypeHeader[0]
+        const contentType = contentTypeHeader[0]
 
-        // if (contentType !== 'multipart/form-data') {
-        //     throw new ContentTypeException('Illegal Content-Type')
-        // }
+        if (contentType !== 'multipart/form-data') {
+            throw new ContentTypeException('Illegal Content-Type')
+        }
 
-        // const boundary = contentTypeHeader[1].replace(/boundary=/, '')
+        const boundary = contentTypeHeader[1].replace(/boundary=/, '')
 
         const lockFile = event.body
-        // .split(`--${boundary}`)
-        // .filter((value) => value !== '' && value !== '--\r\n')[0]
-        // .split(/\r\n/)
-        // .filter((value) => value !== '')
-        // .at(-1)
+            .split(`--${boundary}`)
+            .filter((value) => value !== '' && value !== '--\r\n')[0]
+            .split(/\r\n/)
+            .filter((value) => value !== '')
+            .at(-1)
 
         // eslint-disable-next-line no-console
         // console.log(JSON.stringify(lockFile, null, 2))
