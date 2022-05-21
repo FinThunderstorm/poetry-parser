@@ -1,14 +1,4 @@
-/* eslint-disable max-classes-per-file */
 const { parseFile } = require('./utils/parser')
-
-class ContentTypeException extends Error {
-    constructor(message) {
-        super(message)
-        this.name = 'ContentTypeException'
-        this.statusCode = 400
-        this.extMessage = '400 Bad Request'
-    }
-}
 
 class BodyException extends Error {
     constructor(message) {
@@ -23,72 +13,16 @@ class BodyException extends Error {
 exports.lambdaHandler = async (event, context) => {
     let response
 
-    // eslint-disable-next-line no-console
-    // console.log(
-    //     'Body:',
-    //     typeof event.body,
-    //     '-',
-    //     JSON.stringify(event.body, null, 2)
-    // )
-
-    // eslint-disable-next-line no-console
-    console.log('Event keys:')
-    // eslint-disable-next-line no-restricted-syntax
-    for (const [key, value] of Object.entries(event)) {
-        // eslint-disable-next-line no-console
-        console.log(`  - ${key}`)
-        // eslint-disable-next-line no-console
-        console.log(`  > ${JSON.stringify(value)}`)
-    }
-
-    // eslint-disable-next-line no-console
-    console.log('Headers:')
-    if (event.headers) {
-        // eslint-disable-next-line no-restricted-syntax
-        for (const [key, value] of Object.entries(event.headers)) {
-            // eslint-disable-next-line no-console
-            console.log(`  - ${key}: ${value}`)
-        }
-    }
-
     try {
         if (event.body === null || event.body === undefined) {
             throw new BodyException('Empty Body')
         }
 
-        if (event.params) {
-            // eslint-disable-next-line no-param-reassign
-            event.body = Buffer.from(event.body, 'base64').toString()
+        let lockFile = event.body
+        if (event.isBase64Encoded) {
+            lockFile = Buffer.from(lockFile, 'base64').toString('utf-8')
         }
 
-        if (event.headers['Content-Type'] === undefined) {
-            throw new ContentTypeException('Content-Type Header Missing')
-        }
-        const contentTypeHeader = event.headers['Content-Type'].split(/; /)
-
-        if (contentTypeHeader.length !== 2) {
-            throw new ContentTypeException(
-                'Content-Type Header Information Incorrect'
-            )
-        }
-
-        const contentType = contentTypeHeader[0]
-
-        if (contentType !== 'multipart/form-data') {
-            throw new ContentTypeException('Illegal Content-Type')
-        }
-
-        const boundary = contentTypeHeader[1].replace(/boundary=/, '')
-
-        const lockFile = event.body
-            .split(`--${boundary}`)
-            .filter((value) => value !== '' && value !== '--\r\n')[0]
-            .split(/\r\n/)
-            .filter((value) => value !== '')
-            .at(-1)
-
-        // eslint-disable-next-line no-console
-        // console.log(JSON.stringify(lockFile, null, 2))
         const packages = parseFile(lockFile)
 
         response = {
@@ -102,6 +36,7 @@ exports.lambdaHandler = async (event, context) => {
             ),
             headers: {
                 'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
             },
         }
     } catch (err) {
