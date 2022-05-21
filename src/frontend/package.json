@@ -10,6 +10,7 @@
         "@mui/icons-material": "^5.8.0",
         "@mui/lab": "^5.0.0-alpha.82",
         "@mui/material": "^5.8.0",
+        "@reduxjs/toolkit": "^1.8.1",
         "aws-amplify": "^4.3.22",
         "axios": "^0.27.2",
         "react": "^17.0.2",
@@ -18,11 +19,11 @@
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.1",
         "react-test-renderer": "^17.0.2",
-        "redux": "^4.2.0",
         "redux-thunk": "^2.4.1",
         "web-vitals": "^2.1.4"
     },
     "devDependencies": {
+        "@redux-devtools/core": "^3.12.0",
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^12.1.4",
         "cypress": "^9.6.1",
@@ -35,8 +36,7 @@
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.30.0",
         "eslint-plugin-react-hooks": "^4.5.0",
-        "husky": "^8.0.1",
-        "lint-staged": "^12.4.1",
+        "eslint-plugin-react-redux": "^4.0.0",
         "prettier": "^2.6.2"
     },
     "scripts": {
@@ -52,7 +52,7 @@
         "prettier": "npx prettier --write .",
         "prettier:ci": "npx prettier --check .",
         "cypress:open": "cypress open",
-        "updatesnapshots": "jest --updateSnapshot --passWithNoTests"
+        "updatesnapshots": "jest --updateSnapshot"
     },
     "eslintConfig": {
         "extends": [
@@ -83,9 +83,9 @@
             "npm run prettier"
         ],
         "*.jsx": [
+            "npm run updatesnapshots",
             "npm run lint:fix",
-            "npm run prettier",
-            "npm run updatesnapshots"
+            "npm run prettier"
         ],
         "*.json": [
             "npm run prettier"

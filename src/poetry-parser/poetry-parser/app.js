@@ -1,8 +1,12 @@
 const { parseFile } = require('./utils/parser')
 
-const ContentTypeException = (message) => {
-    this.message = message
-    this.name = 'ContentTypeException'
+class BodyException extends Error {
+    constructor(message) {
+        super(message)
+        this.name = 'BodyException'
+        this.statusCode = 400
+        this.extMessage = '400 Bad Request'
+    }
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -10,24 +14,15 @@ exports.lambdaHandler = async (event, context) => {
     let response
 
     try {
-        const contentTypeHeader = event.headers['Content-Type'].split(/; /)
-        const contentType = contentTypeHeader[0]
-
-        if (contentType !== 'multipart/form-data') {
-            throw new ContentTypeException('Illegal Content-Type')
+        if (event.body === null || event.body === undefined) {
+            throw new BodyException('Empty Body')
         }
 
-        const boundary = contentTypeHeader[1].replace(/boundary=/, '')
+        let lockFile = event.body
+        if (event.isBase64Encoded) {
+            lockFile = Buffer.from(lockFile, 'base64').toString('utf-8')
+        }
 
-        const lockFile = event.body
-            .split(`--${boundary}`)
-            .filter((value) => value !== '' && value !== '--\r\n')[0]
-            .split(/\r\n/)
-            .filter((value) => value !== '')
-            .at(-1)
-
-        // eslint-disable-next-line no-console
-        console.log(JSON.stringify(lockFile, null, 2))
         const packages = parseFile(lockFile)
 
         response = {
@@ -39,10 +34,23 @@ exports.lambdaHandler = async (event, context) => {
                 null,
                 4
             ),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+            },
         }
     } catch (err) {
         console.error(err) // eslint-disable-line no-console
-        return err
+        response = {
+            statusCode: err.statusCode,
+            body: JSON.stringify(
+                {
+                    error: err.extMessage,
+                },
+                null,
+                4
+            ),
+        }
     }
 
     return response

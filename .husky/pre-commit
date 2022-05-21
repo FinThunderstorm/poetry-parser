@@ -2,3 +2,11 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged --cwd src/poetry-parser/poetry-parser
+if [ $? -ne 0 ]; then
+   exit 1
+fi
+npx lint-staged --cwd src/frontend
+if [ $? -ne 0 ]; then
+   exit 1
+fi
+
