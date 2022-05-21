@@ -1,0 +1,19 @@
+{
+  "name": "poetry-parser",
+  "version": "0.0.1",
+  "description": "Reaktor's pre-assignment for Autumn 2022 (https://www.reaktor.com/assignment-fall-2022-developers/)",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1"
+  }
+}
