@@ -3,5 +3,12 @@
     "description": "Poetry plugin to export the dependencies to various formats",
     "optional": "false",
     "pythonVersions": [">=3.7", "<4.0"],
-    "dependencies": ["poetry"]
+    "dependencies": {
+        "poetry": {
+            "name": "poetry",
+            "optional": false,
+            "source": "dependencies"
+        }
+    },
+    "reverseDependencies": []
 }

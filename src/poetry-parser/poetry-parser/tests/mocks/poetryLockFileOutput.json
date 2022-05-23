@@ -1,0 +1,2866 @@
+{
+    "atomicwrites": {
+        "name": "atomicwrites",
+        "description": "Atomic file writes.",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            }
+        ]
+    },
+    "attrs": {
+        "name": "attrs",
+        "description": "Classes Without Boilerplate",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": {
+            "coverage[toml]": {
+                "name": "coverage[toml]",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "hypothesis": {
+                "name": "hypothesis",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pympler": {
+                "name": "pympler",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "six": {
+                "name": "six",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "mypy": {
+                "name": "mypy",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-mypy-plugins": {
+                "name": "pytest-mypy-plugins",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "zope.interface": {
+                "name": "zope.interface",
+                "category": "tests",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "furo": {
+                "name": "furo",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-notfound-page": {
+                "name": "sphinx-notfound-page",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pre-commit": {
+                "name": "pre-commit",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "cloudpickle": {
+                "name": "cloudpickle",
+                "category": "tests_no_zope",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            }
+        ]
+    },
+    "cachecontrol": {
+        "name": "cachecontrol",
+        "description": "httplib2 caching for requests",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "lockfile": {
+                "name": "lockfile",
+                "category": "filecache",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "msgpack": {
+                "name": "msgpack",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "requests": {
+                "name": "requests",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "redis": {
+                "name": "redis",
+                "category": "redis",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "cachy": {
+        "name": "cachy",
+        "description": "Cachy provides a simple yet effective caching library.",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
+        "dependencies": {
+            "redis": {
+                "name": "redis",
+                "category": "redis",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "python-memcached": {
+                "name": "python-memcached",
+                "category": "memcached",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "msgpack-python": {
+                "name": "msgpack-python",
+                "category": "msgpack",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "certifi": {
+        "name": "certifi",
+        "description": "Python package for providing Mozilla's CA Bundle.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "dulwich",
+                "installed": true
+            },
+            {
+                "name": "requests",
+                "installed": true
+            },
+            {
+                "name": "urllib3",
+                "installed": true
+            }
+        ]
+    },
+    "cffi": {
+        "name": "cffi",
+        "description": "Foreign Function Interface for Python calling C code.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "pycparser": {
+                "name": "pycparser",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "cryptography",
+                "installed": true
+            }
+        ]
+    },
+    "cfgv": {
+        "name": "cfgv",
+        "description": "Validate configuration and produce human readable error messages.",
+        "optional": "false",
+        "pythonVersions": [">=3.6.1"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pre-commit",
+                "installed": true
+            }
+        ]
+    },
+    "charset-normalizer": {
+        "name": "charset-normalizer",
+        "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+        "optional": "false",
+        "pythonVersions": [">=3.5.0"],
+        "dependencies": {
+            "unicodedata2": {
+                "name": "unicodedata2",
+                "category": "unicode_backport",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "requests",
+                "installed": true
+            }
+        ]
+    },
+    "cleo": {
+        "name": "cleo",
+        "description": "Cleo allows you to create beautiful and testable command-line interfaces.",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"],
+        "dependencies": {
+            "crashtest": {
+                "name": "crashtest",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pylev": {
+                "name": "pylev",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "colorama": {
+        "name": "colorama",
+        "description": "Cross-platform colored terminal text.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            }
+        ]
+    },
+    "coverage": {
+        "name": "coverage",
+        "description": "Code coverage measurement for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "tomli": {
+                "name": "tomli",
+                "category": "toml",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "filelock",
+                "installed": true
+            },
+            {
+                "name": "pkginfo",
+                "installed": true
+            },
+            {
+                "name": "pytest-cov",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "crashtest": {
+        "name": "crashtest",
+        "description": "Manage Python errors with ease",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "cleo",
+                "installed": true
+            }
+        ]
+    },
+    "cryptography": {
+        "name": "cryptography",
+        "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "cffi": {
+                "name": "cffi",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-rtd-theme": {
+                "name": "sphinx-rtd-theme",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pyenchant": {
+                "name": "pyenchant",
+                "category": "docstest",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "twine": {
+                "name": "twine",
+                "category": "docstest",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinxcontrib-spelling": {
+                "name": "sphinxcontrib-spelling",
+                "category": "docstest",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "black": {
+                "name": "black",
+                "category": "pep8test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "flake8": {
+                "name": "flake8",
+                "category": "pep8test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "flake8-import-order": {
+                "name": "flake8-import-order",
+                "category": "pep8test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pep8-naming": {
+                "name": "pep8-naming",
+                "category": "pep8test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "setuptools_rust": {
+                "name": "setuptools_rust",
+                "category": "sdist",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "bcrypt": {
+                "name": "bcrypt",
+                "category": "ssh",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-benchmark": {
+                "name": "pytest-benchmark",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-subtests": {
+                "name": "pytest-subtests",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-xdist": {
+                "name": "pytest-xdist",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pretend": {
+                "name": "pretend",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "iso8601": {
+                "name": "iso8601",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytz": {
+                "name": "pytz",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "hypothesis": {
+                "name": "hypothesis",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "secretstorage",
+                "installed": true
+            },
+            {
+                "name": "urllib3",
+                "installed": true
+            }
+        ]
+    },
+    "deepdiff": {
+        "name": "deepdiff",
+        "description": "Deep Difference and Search of any Python object/data.",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "ordered-set": {
+                "name": "ordered-set",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "click": {
+                "name": "click",
+                "category": "cli",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pyyaml": {
+                "name": "pyyaml",
+                "category": "cli",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "toml": {
+                "name": "toml",
+                "category": "cli",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "clevercsv": {
+                "name": "clevercsv",
+                "category": "cli",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "distlib": {
+        "name": "distlib",
+        "description": "Distribution utilities",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "dulwich": {
+        "name": "dulwich",
+        "description": "Python Git Library",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "certifi": {
+                "name": "certifi",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "urllib3": {
+                "name": "urllib3",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "fastimport": {
+                "name": "fastimport",
+                "category": "fastimport",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "urllib3[secure]": {
+                "name": "urllib3[secure]",
+                "category": "https",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "gpg": {
+                "name": "gpg",
+                "category": "pgp",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pyinotify": {
+                "name": "pyinotify",
+                "category": "watch",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "entrypoints": {
+        "name": "entrypoints",
+        "description": "Discover and load entry points from installed packages.",
+        "optional": "false",
+        "pythonVersions": [">=2.7"],
+        "dependencies": {},
+        "reverseDependencies": []
+    },
+    "filelock": {
+        "name": "filelock",
+        "description": "A platform independent file lock.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "furo": {
+                "name": "furo",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-autodoc-typehints": {
+                "name": "sphinx-autodoc-typehints",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "covdefaults": {
+                "name": "covdefaults",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "coverage": {
+                "name": "coverage",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-timeout": {
+                "name": "pytest-timeout",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "flatdict": {
+        "name": "flatdict",
+        "description": "Python module for interacting with nested dicts as a single level dict with delimited keys.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": []
+    },
+    "html5lib": {
+        "name": "html5lib",
+        "description": "HTML parser based on the WHATWG HTML specification",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": {
+            "six": {
+                "name": "six",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "webencodings": {
+                "name": "webencodings",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "genshi": {
+                "name": "genshi",
+                "category": "genshi",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "chardet": {
+                "name": "chardet",
+                "category": "chardet",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "lxml": {
+                "name": "lxml",
+                "category": "lxml",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "httpretty": {
+        "name": "httpretty",
+        "description": "HTTP client mock for Python",
+        "optional": "false",
+        "pythonVersions": [">=3"],
+        "dependencies": {},
+        "reverseDependencies": []
+    },
+    "identify": {
+        "name": "identify",
+        "description": "File identification library for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "ukkonen": {
+                "name": "ukkonen",
+                "category": "license",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "pre-commit",
+                "installed": true
+            }
+        ]
+    },
+    "idna": {
+        "name": "idna",
+        "description": "Internationalized Domain Names in Applications (IDNA)",
+        "optional": "false",
+        "pythonVersions": [">=3.5"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "requests",
+                "installed": true
+            },
+            {
+                "name": "urllib3",
+                "installed": true
+            }
+        ]
+    },
+    "importlib-metadata": {
+        "name": "importlib-metadata",
+        "description": "Read metadata from Python packages",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "typing-extensions": {
+                "name": "typing-extensions",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "zipp": {
+                "name": "zipp",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jaraco.packaging": {
+                "name": "jaraco.packaging",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "rst.linker": {
+                "name": "rst.linker",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "ipython": {
+                "name": "ipython",
+                "category": "perf",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-checkdocs": {
+                "name": "pytest-checkdocs",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-flake8": {
+                "name": "pytest-flake8",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-enabler": {
+                "name": "pytest-enabler",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "packaging": {
+                "name": "packaging",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pyfakefs": {
+                "name": "pyfakefs",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "flufl.flake8": {
+                "name": "flufl.flake8",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-perf": {
+                "name": "pytest-perf",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-black": {
+                "name": "pytest-black",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-mypy": {
+                "name": "pytest-mypy",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "importlib-resources": {
+                "name": "importlib-resources",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "keyring",
+                "installed": true
+            },
+            {
+                "name": "pluggy",
+                "installed": true
+            },
+            {
+                "name": "poetry-core",
+                "installed": true
+            },
+            {
+                "name": "pre-commit",
+                "installed": true
+            },
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "iniconfig": {
+        "name": "iniconfig",
+        "description": "iniconfig: brain-dead simple config-ini parsing",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            }
+        ]
+    },
+    "jeepney": {
+        "name": "jeepney",
+        "description": "Low-level, pure Python DBus protocol wrapper.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "pytest": {
+                "name": "pytest",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-trio": {
+                "name": "pytest-trio",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-asyncio": {
+                "name": "pytest-asyncio",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "testpath": {
+                "name": "testpath",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "trio": {
+                "name": "trio",
+                "category": "trio",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "async-timeout": {
+                "name": "async-timeout",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "async-generator": {
+                "name": "async-generator",
+                "category": "trio",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "keyring",
+                "installed": true
+            },
+            {
+                "name": "secretstorage",
+                "installed": true
+            }
+        ]
+    },
+    "keyring": {
+        "name": "keyring",
+        "description": "Store and access your passwords safely.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "jeepney": {
+                "name": "jeepney",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pywin32-ctypes": {
+                "name": "pywin32-ctypes",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "SecretStorage": {
+                "name": "SecretStorage",
+                "optional": false,
+                "source": "dependencies",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jaraco.packaging": {
+                "name": "jaraco.packaging",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "rst.linker": {
+                "name": "rst.linker",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jaraco.tidelift": {
+                "name": "jaraco.tidelift",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-checkdocs": {
+                "name": "pytest-checkdocs",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-flake8": {
+                "name": "pytest-flake8",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-enabler": {
+                "name": "pytest-enabler",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-black": {
+                "name": "pytest-black",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-mypy": {
+                "name": "pytest-mypy",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "lockfile": {
+        "name": "lockfile",
+        "description": "Platform-independent file locking module",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "cachecontrol",
+                "installed": true
+            }
+        ]
+    },
+    "msgpack": {
+        "name": "msgpack",
+        "description": "MessagePack (de)serializer.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "cachecontrol",
+                "installed": true
+            }
+        ]
+    },
+    "mypy": {
+        "name": "mypy",
+        "description": "Optional static typing for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "mypy-extensions": {
+                "name": "mypy-extensions",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "tomli": {
+                "name": "tomli",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "typed-ast": {
+                "name": "typed-ast",
+                "category": "python2",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "typing-extensions": {
+                "name": "typing-extensions",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "psutil": {
+                "name": "psutil",
+                "category": "dmypy",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "lxml": {
+                "name": "lxml",
+                "category": "reports",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "attrs",
+                "installed": true
+            },
+            {
+                "name": "ordered-set",
+                "installed": true
+            }
+        ]
+    },
+    "mypy-extensions": {
+        "name": "mypy-extensions",
+        "description": "Experimental type system extensions for programs checked with the mypy typechecker.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "mypy",
+                "installed": true
+            }
+        ]
+    },
+    "nodeenv": {
+        "name": "nodeenv",
+        "description": "Node.js virtual environment builder",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pre-commit",
+                "installed": true
+            }
+        ]
+    },
+    "ordered-set": {
+        "name": "ordered-set",
+        "description": "An OrderedSet is a custom MutableSet that remembers its order, so that every",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "pytest": {
+                "name": "pytest",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "black": {
+                "name": "black",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "mypy": {
+                "name": "mypy",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "deepdiff",
+                "installed": true
+            }
+        ]
+    },
+    "packaging": {
+        "name": "packaging",
+        "description": "Core utilities for Python packages",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "pyparsing": {
+                "name": "pyparsing",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "importlib-metadata",
+                "installed": true
+            },
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "pytest-sugar",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "pexpect": {
+        "name": "pexpect",
+        "description": "Pexpect allows easy control of interactive console applications.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "ptyprocess": {
+                "name": "ptyprocess",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "pkginfo": {
+        "name": "pkginfo",
+        "description": "Query metadatdata from sdists / bdists / installed packages.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "coverage": {
+                "name": "coverage",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "nose": {
+                "name": "nose",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "platformdirs": {
+        "name": "platformdirs",
+        "description": "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\".",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "furo": {
+                "name": "furo",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "proselint": {
+                "name": "proselint",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-autodoc-typehints": {
+                "name": "sphinx-autodoc-typehints",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "appdirs": {
+                "name": "appdirs",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-mock": {
+                "name": "pytest-mock",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "test",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "pluggy": {
+        "name": "pluggy",
+        "description": "plugin and hook calling mechanisms for python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pre-commit": {
+                "name": "pre-commit",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "tox": {
+                "name": "tox",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-benchmark": {
+                "name": "pytest-benchmark",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            }
+        ]
+    },
+    "poetry-core": {
+        "name": "poetry-core",
+        "description": "Poetry PEP 517 Build Backend",
+        "optional": "false",
+        "pythonVersions": [">=3.7", "<4.0"],
+        "dependencies": {
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "poetry-plugin-export": {
+        "name": "poetry-plugin-export",
+        "description": "Poetry plugin to export the dependencies to various formats",
+        "optional": "false",
+        "pythonVersions": [">=3.7", "<4.0"],
+        "dependencies": {
+            "poetry": {
+                "name": "poetry",
+                "optional": false,
+                "source": "dependencies",
+                "installed": false
+            }
+        },
+        "reverseDependencies": []
+    },
+    "pre-commit": {
+        "name": "pre-commit",
+        "description": "A framework for managing and maintaining multi-language pre-commit hooks.",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "cfgv": {
+                "name": "cfgv",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "identify": {
+                "name": "identify",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "nodeenv": {
+                "name": "nodeenv",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pyyaml": {
+                "name": "pyyaml",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "toml": {
+                "name": "toml",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "virtualenv": {
+                "name": "virtualenv",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "attrs",
+                "installed": true
+            },
+            {
+                "name": "pluggy",
+                "installed": true
+            },
+            {
+                "name": "pytest-mock",
+                "installed": true
+            }
+        ]
+    },
+    "ptyprocess": {
+        "name": "ptyprocess",
+        "description": "Run a subprocess in a pseudo terminal",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pexpect",
+                "installed": true
+            }
+        ]
+    },
+    "py": {
+        "name": "py",
+        "description": "library with cross-python path, ini-parsing, io, code, log facilities",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            }
+        ]
+    },
+    "pycparser": {
+        "name": "pycparser",
+        "description": "C parser in Python",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "cffi",
+                "installed": true
+            }
+        ]
+    },
+    "pylev": {
+        "name": "pylev",
+        "description": "A pure Python Levenshtein implementation that's not freaking GPL'd.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "cleo",
+                "installed": true
+            }
+        ]
+    },
+    "pyparsing": {
+        "name": "pyparsing",
+        "description": "pyparsing module - Classes and methods to define and execute parsing grammars",
+        "optional": "false",
+        "pythonVersions": [">=3.6.8"],
+        "dependencies": {
+            "railroad-diagrams": {
+                "name": "railroad-diagrams",
+                "category": "diagrams",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jinja2": {
+                "name": "jinja2",
+                "category": "diagrams",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "packaging",
+                "installed": true
+            }
+        ]
+    },
+    "pytest": {
+        "name": "pytest",
+        "description": "pytest: simple powerful testing with Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "atomicwrites": {
+                "name": "atomicwrites",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "attrs": {
+                "name": "attrs",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "colorama": {
+                "name": "colorama",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "iniconfig": {
+                "name": "iniconfig",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "packaging": {
+                "name": "packaging",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pluggy": {
+                "name": "pluggy",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "py": {
+                "name": "py",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "toml": {
+                "name": "toml",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "argcomplete": {
+                "name": "argcomplete",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "hypothesis": {
+                "name": "hypothesis",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "mock": {
+                "name": "mock",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "nose": {
+                "name": "nose",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "requests": {
+                "name": "requests",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "xmlschema": {
+                "name": "xmlschema",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "attrs",
+                "installed": true
+            },
+            {
+                "name": "cryptography",
+                "installed": true
+            },
+            {
+                "name": "filelock",
+                "installed": true
+            },
+            {
+                "name": "importlib-metadata",
+                "installed": true
+            },
+            {
+                "name": "jeepney",
+                "installed": true
+            },
+            {
+                "name": "keyring",
+                "installed": true
+            },
+            {
+                "name": "ordered-set",
+                "installed": true
+            },
+            {
+                "name": "platformdirs",
+                "installed": true
+            },
+            {
+                "name": "pluggy",
+                "installed": true
+            },
+            {
+                "name": "pytest-cov",
+                "installed": true
+            },
+            {
+                "name": "pytest-mock",
+                "installed": true
+            },
+            {
+                "name": "pytest-sugar",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            },
+            {
+                "name": "zipp",
+                "installed": true
+            }
+        ]
+    },
+    "pytest-cov": {
+        "name": "pytest-cov",
+        "description": "Pytest plugin for measuring coverage.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*"
+        ],
+        "dependencies": {
+            "coverage": {
+                "name": "coverage",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pytest": {
+                "name": "pytest",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "toml": {
+                "name": "toml",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "fields": {
+                "name": "fields",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "hunter": {
+                "name": "hunter",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "process-tests": {
+                "name": "process-tests",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "six": {
+                "name": "six",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-xdist": {
+                "name": "pytest-xdist",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "virtualenv": {
+                "name": "virtualenv",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "cryptography",
+                "installed": true
+            },
+            {
+                "name": "filelock",
+                "installed": true
+            },
+            {
+                "name": "importlib-metadata",
+                "installed": true
+            },
+            {
+                "name": "keyring",
+                "installed": true
+            },
+            {
+                "name": "platformdirs",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "zipp",
+                "installed": true
+            }
+        ]
+    },
+    "pytest-mock": {
+        "name": "pytest-mock",
+        "description": "Thin-wrapper around the mock package for easier use with pytest",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "pytest": {
+                "name": "pytest",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pre-commit": {
+                "name": "pre-commit",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "tox": {
+                "name": "tox",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-asyncio": {
+                "name": "pytest-asyncio",
+                "category": "dev",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "platformdirs",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "pytest-sugar": {
+        "name": "pytest-sugar",
+        "description": "pytest-sugar is a plugin for pytest that changes the default look and feel of pytest (e.g. progressbar, show tests that fail instantly).",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "packaging": {
+                "name": "packaging",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pytest": {
+                "name": "pytest",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "termcolor": {
+                "name": "termcolor",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "pywin32-ctypes": {
+        "name": "pywin32-ctypes",
+        "description": "",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "keyring",
+                "installed": true
+            }
+        ]
+    },
+    "pyyaml": {
+        "name": "pyyaml",
+        "description": "YAML parser and emitter for Python",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "deepdiff",
+                "installed": true
+            },
+            {
+                "name": "pre-commit",
+                "installed": true
+            }
+        ]
+    },
+    "requests": {
+        "name": "requests",
+        "description": "Python HTTP for Humans.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            "!=3.5.*"
+        ],
+        "dependencies": {
+            "certifi": {
+                "name": "certifi",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "charset-normalizer": {
+                "name": "charset-normalizer",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "idna": {
+                "name": "idna",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "urllib3": {
+                "name": "urllib3",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "PySocks": {
+                "name": "PySocks",
+                "category": "socks",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "win-inet-pton": {
+                "name": "win-inet-pton",
+                "category": "socks",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "chardet": {
+                "name": "chardet",
+                "category": "use_chardet_on_py3",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "cachecontrol",
+                "installed": true
+            },
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "requests-toolbelt",
+                "installed": true
+            }
+        ]
+    },
+    "requests-toolbelt": {
+        "name": "requests-toolbelt",
+        "description": "A utility belt for advanced users of python-requests",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "requests": {
+                "name": "requests",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "secretstorage": {
+        "name": "secretstorage",
+        "description": "Python bindings to FreeDesktop.org Secret Service API",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {
+            "cryptography": {
+                "name": "cryptography",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "jeepney": {
+                "name": "jeepney",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "shellingham": {
+        "name": "shellingham",
+        "description": "Tool to Detect Surrounding Shell",
+        "optional": "false",
+        "pythonVersions": ["!=3.0", "!=3.1", "!=3.2", "!=3.3", ">=2.6"],
+        "dependencies": {},
+        "reverseDependencies": []
+    },
+    "six": {
+        "name": "six",
+        "description": "Python 2 and 3 compatibility utilities",
+        "optional": "false",
+        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "attrs",
+                "installed": true
+            },
+            {
+                "name": "html5lib",
+                "installed": true
+            },
+            {
+                "name": "pytest-cov",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            },
+            {
+                "name": "virtualenv",
+                "installed": true
+            }
+        ]
+    },
+    "termcolor": {
+        "name": "termcolor",
+        "description": "ANSII Color formatting for output in terminal.",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "pytest-sugar",
+                "installed": true
+            }
+        ]
+    },
+    "toml": {
+        "name": "toml",
+        "description": "Python Library for Tom's Obvious, Minimal Language",
+        "optional": "false",
+        "pythonVersions": [">=2.6", "!=3.0.*", "!=3.1.*", "!=3.2.*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "deepdiff",
+                "installed": true
+            },
+            {
+                "name": "pre-commit",
+                "installed": true
+            },
+            {
+                "name": "pytest",
+                "installed": true
+            },
+            {
+                "name": "pytest-cov",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            }
+        ]
+    },
+    "tomli": {
+        "name": "tomli",
+        "description": "A lil' TOML parser",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "coverage",
+                "installed": true
+            },
+            {
+                "name": "mypy",
+                "installed": true
+            }
+        ]
+    },
+    "tomlkit": {
+        "name": "tomlkit",
+        "description": "Style preserving TOML library",
+        "optional": "false",
+        "pythonVersions": [">=3.6", "<4.0"],
+        "dependencies": {},
+        "reverseDependencies": []
+    },
+    "tox": {
+        "name": "tox",
+        "description": "tox is a generic virtualenv management and test command line tool",
+        "optional": "false",
+        "pythonVersions": [
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            ">=2.7"
+        ],
+        "dependencies": {
+            "colorama": {
+                "name": "colorama",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "filelock": {
+                "name": "filelock",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "packaging": {
+                "name": "packaging",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pluggy": {
+                "name": "pluggy",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "py": {
+                "name": "py",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "six": {
+                "name": "six",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "toml": {
+                "name": "toml",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "virtualenv": {
+                "name": "virtualenv",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "pygments-github-lexers": {
+                "name": "pygments-github-lexers",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinxcontrib-autoprogram": {
+                "name": "sphinxcontrib-autoprogram",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "towncrier": {
+                "name": "towncrier",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "flaky": {
+                "name": "flaky",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "freezegun": {
+                "name": "freezegun",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-mock": {
+                "name": "pytest-mock",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-randomly": {
+                "name": "pytest-randomly",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "psutil": {
+                "name": "psutil",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pathlib2": {
+                "name": "pathlib2",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "pluggy",
+                "installed": true
+            },
+            {
+                "name": "pytest-mock",
+                "installed": true
+            }
+        ]
+    },
+    "typed-ast": {
+        "name": "typed-ast",
+        "description": "a fork of Python 2 and 3 ast modules with type comment support",
+        "optional": "false",
+        "pythonVersions": [">=3.6"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "mypy",
+                "installed": true
+            }
+        ]
+    },
+    "types-requests": {
+        "name": "types-requests",
+        "description": "Typing stubs for requests",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {
+            "types-urllib3": {
+                "name": "types-urllib3",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            }
+        },
+        "reverseDependencies": []
+    },
+    "types-urllib3": {
+        "name": "types-urllib3",
+        "description": "Typing stubs for urllib3",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "types-requests",
+                "installed": true
+            }
+        ]
+    },
+    "typing-extensions": {
+        "name": "typing-extensions",
+        "description": "Backported and Experimental Type Hints for Python 3.7+",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "importlib-metadata",
+                "installed": true
+            },
+            {
+                "name": "mypy",
+                "installed": true
+            }
+        ]
+    },
+    "urllib3": {
+        "name": "urllib3",
+        "description": "HTTP library with thread-safe connection pooling, file post, and more.",
+        "optional": "false",
+        "pythonVersions": [
+            ">=2.7",
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            "<4"
+        ],
+        "dependencies": {
+            "brotlicffi": {
+                "name": "brotlicffi",
+                "category": "brotli",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "brotli": {
+                "name": "brotli",
+                "category": "brotli",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "brotlipy": {
+                "name": "brotlipy",
+                "category": "brotli",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pyOpenSSL": {
+                "name": "pyOpenSSL",
+                "category": "secure",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "cryptography": {
+                "name": "cryptography",
+                "category": "secure",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "idna": {
+                "name": "idna",
+                "category": "secure",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "certifi": {
+                "name": "certifi",
+                "category": "secure",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "ipaddress": {
+                "name": "ipaddress",
+                "category": "secure",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "PySocks": {
+                "name": "PySocks",
+                "category": "socks",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "dulwich",
+                "installed": true
+            },
+            {
+                "name": "requests",
+                "installed": true
+            }
+        ]
+    },
+    "virtualenv": {
+        "name": "virtualenv",
+        "description": "Virtual Python Environment builder",
+        "optional": "false",
+        "pythonVersions": [
+            "!=3.0.*",
+            "!=3.1.*",
+            "!=3.2.*",
+            "!=3.3.*",
+            "!=3.4.*",
+            ">=2.7"
+        ],
+        "dependencies": {
+            "distlib": {
+                "name": "distlib",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "filelock": {
+                "name": "filelock",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "importlib-metadata": {
+                "name": "importlib-metadata",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "platformdirs": {
+                "name": "platformdirs",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "six": {
+                "name": "six",
+                "optional": false,
+                "source": "dependencies",
+                "installed": true
+            },
+            "proselint": {
+                "name": "proselint",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-argparse": {
+                "name": "sphinx-argparse",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "sphinx-rtd-theme": {
+                "name": "sphinx-rtd-theme",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "towncrier": {
+                "name": "towncrier",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "coverage": {
+                "name": "coverage",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "coverage-enable-subprocess": {
+                "name": "coverage-enable-subprocess",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "flaky": {
+                "name": "flaky",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-env": {
+                "name": "pytest-env",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-freezegun": {
+                "name": "pytest-freezegun",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-mock": {
+                "name": "pytest-mock",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-randomly": {
+                "name": "pytest-randomly",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-timeout": {
+                "name": "pytest-timeout",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "packaging": {
+                "name": "packaging",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "pre-commit",
+                "installed": true
+            },
+            {
+                "name": "pytest-cov",
+                "installed": true
+            },
+            {
+                "name": "tox",
+                "installed": true
+            }
+        ]
+    },
+    "webencodings": {
+        "name": "webencodings",
+        "description": "Character encoding aliases for legacy web content",
+        "optional": "false",
+        "pythonVersions": ["*"],
+        "dependencies": {},
+        "reverseDependencies": [
+            {
+                "name": "html5lib",
+                "installed": true
+            }
+        ]
+    },
+    "zipp": {
+        "name": "zipp",
+        "description": "Backport of pathlib-compatible object wrapper for zip files",
+        "optional": "false",
+        "pythonVersions": [">=3.7"],
+        "dependencies": {
+            "sphinx": {
+                "name": "sphinx",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jaraco.packaging": {
+                "name": "jaraco.packaging",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "rst.linker": {
+                "name": "rst.linker",
+                "category": "docs",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest": {
+                "name": "pytest",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-checkdocs": {
+                "name": "pytest-checkdocs",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-flake8": {
+                "name": "pytest-flake8",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-cov": {
+                "name": "pytest-cov",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": true
+            },
+            "pytest-enabler": {
+                "name": "pytest-enabler",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "jaraco.itertools": {
+                "name": "jaraco.itertools",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "func-timeout": {
+                "name": "func-timeout",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-black": {
+                "name": "pytest-black",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            },
+            "pytest-mypy": {
+                "name": "pytest-mypy",
+                "category": "testing",
+                "optional": true,
+                "source": "extras",
+                "installed": false
+            }
+        },
+        "reverseDependencies": [
+            {
+                "name": "importlib-metadata",
+                "installed": true
+            }
+        ]
+    }
+}

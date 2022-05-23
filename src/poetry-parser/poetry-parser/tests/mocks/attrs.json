@@ -10,51 +10,85 @@
         "!=3.3.*",
         "!=3.4.*"
     ],
-    "extras": [
-        {
-            "dev": [
-                "coverage[toml]",
-                "hypothesis",
-                "pympler",
-                "pytest",
-                "six",
-                "mypy",
-                "pytest-mypy-plugins",
-                "zope.interface",
-                "furo",
-                "sphinx",
-                "sphinx-notfound-page",
-                "pre-commit",
-                "cloudpickle"
-            ]
+    "dependencies": {
+        "coverage[toml]": {
+            "name": "coverage[toml]",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
         },
-        {
-            "docs": ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
+        "hypothesis": {
+            "name": "hypothesis",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
         },
-        {
-            "tests": [
-                "coverage[toml]",
-                "hypothesis",
-                "pympler",
-                "pytest",
-                "six",
-                "mypy",
-                "pytest-mypy-plugins",
-                "zope.interface",
-                "cloudpickle"
-            ]
+        "pympler": {
+            "name": "pympler",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
         },
-        {
-            "tests_no_zope": [
-                "coverage[toml]",
-                "hypothesis",
-                "pympler",
-                "pytest",
-                "six",
-                "mypy",
-                "pytest-mypy-plugins",
-                "cloudpickle"
-            ]
+        "pytest": {
+            "name": "pytest",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
+        },
+        "six": {
+            "name": "six",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
+        },
+        "mypy": {
+            "name": "mypy",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-mypy-plugins": {
+            "name": "pytest-mypy-plugins",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
+        },
+        "zope.interface": {
+            "name": "zope.interface",
+            "category": "tests",
+            "optional": true,
+            "source": "extras"
+        },
+        "furo": {
+            "name": "furo",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "sphinx": {
+            "name": "sphinx",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "sphinx-notfound-page": {
+            "name": "sphinx-notfound-page",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "pre-commit": {
+            "name": "pre-commit",
+            "category": "dev",
+            "optional": true,
+            "source": "extras"
+        },
+        "cloudpickle": {
+            "name": "cloudpickle",
+            "category": "tests_no_zope",
+            "optional": true,
+            "source": "extras"
         }
-    ]
+    },
+    "reverseDependencies": []
 }

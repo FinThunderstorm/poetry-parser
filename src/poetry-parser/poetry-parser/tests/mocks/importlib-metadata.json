@@ -1,0 +1,115 @@
+{
+    "name": "importlib-metadata",
+    "description": "Read metadata from Python packages",
+    "optional": "false",
+    "pythonVersions": [">=3.7"],
+    "dependencies": {
+        "typing-extensions": {
+            "name": "typing-extensions",
+            "optional": false,
+            "source": "dependencies"
+        },
+        "zipp": {
+            "name": "zipp",
+            "optional": false,
+            "source": "dependencies"
+        },
+        "sphinx": {
+            "name": "sphinx",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "jaraco.packaging": {
+            "name": "jaraco.packaging",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "rst.linker": {
+            "name": "rst.linker",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "ipython": {
+            "name": "ipython",
+            "category": "perf",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest": {
+            "name": "pytest",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-checkdocs": {
+            "name": "pytest-checkdocs",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-flake8": {
+            "name": "pytest-flake8",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-cov": {
+            "name": "pytest-cov",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-enabler": {
+            "name": "pytest-enabler",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "packaging": {
+            "name": "packaging",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pyfakefs": {
+            "name": "pyfakefs",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "flufl.flake8": {
+            "name": "flufl.flake8",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-perf": {
+            "name": "pytest-perf",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-black": {
+            "name": "pytest-black",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-mypy": {
+            "name": "pytest-mypy",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "importlib-resources": {
+            "name": "importlib-resources",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        }
+    },
+    "reverseDependencies": []
+}

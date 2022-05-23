@@ -1,7 +1,7 @@
 const app = require('../app')
 
 const poetryLockFileEvent = require('../../events/poetryslockfileEvent.json')
-const poetryLockFileResult = require('./mocks/poetryslockfile.json')
+const poetryLockFileResult = require('./mocks/poetryLockFileOutput.json')
 
 let context
 
