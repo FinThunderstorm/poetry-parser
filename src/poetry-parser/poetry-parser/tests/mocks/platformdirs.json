@@ -3,12 +3,55 @@
     "description": "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\".",
     "optional": "false",
     "pythonVersions": [">=3.7"],
-    "extras": [
-        {
-            "docs": ["furo", "proselint", "sphinx-autodoc-typehints", "sphinx"]
+    "dependencies": {
+        "furo": {
+            "name": "furo",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
         },
-        {
-            "test": ["appdirs", "pytest-cov", "pytest-mock", "pytest"]
+        "proselint": {
+            "name": "proselint",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "sphinx-autodoc-typehints": {
+            "name": "sphinx-autodoc-typehints",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "sphinx": {
+            "name": "sphinx",
+            "category": "docs",
+            "optional": true,
+            "source": "extras"
+        },
+        "appdirs": {
+            "name": "appdirs",
+            "category": "test",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-cov": {
+            "name": "pytest-cov",
+            "category": "test",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-mock": {
+            "name": "pytest-mock",
+            "category": "test",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest": {
+            "name": "pytest",
+            "category": "test",
+            "optional": true,
+            "source": "extras"
         }
-    ]
+    },
+    "reverseDependencies": []
 }

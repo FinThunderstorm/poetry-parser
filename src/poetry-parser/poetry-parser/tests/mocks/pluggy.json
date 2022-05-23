@@ -3,13 +3,36 @@
     "description": "plugin and hook calling mechanisms for python",
     "optional": "false",
     "pythonVersions": [">=3.6"],
-    "dependencies": ["importlib-metadata"],
-    "extras": [
-        {
-            "dev": ["pre-commit", "tox"]
+    "dependencies": {
+        "importlib-metadata": {
+            "name": "importlib-metadata",
+            "optional": false,
+            "source": "dependencies"
         },
-        {
-            "testing": ["pytest", "pytest-benchmark"]
+        "pre-commit": {
+            "name": "pre-commit",
+            "category": "dev",
+            "optional": true,
+            "source": "extras"
+        },
+        "tox": {
+            "name": "tox",
+            "category": "dev",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest": {
+            "name": "pytest",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
+        },
+        "pytest-benchmark": {
+            "name": "pytest-benchmark",
+            "category": "testing",
+            "optional": true,
+            "source": "extras"
         }
-    ]
+    },
+    "reverseDependencies": []
 }
