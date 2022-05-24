@@ -1,5 +1,11 @@
 const { parseFile } = require('./utils/parser')
 
+/** lambdaHandler parses poetry.lock -file into JSON based on binary file input
+ *
+ * @param {*} event - AWS Lambda event
+ * @param {*} context - AWS Lamba context
+ * @returns {Object} - parsed file as JSON
+ */
 // eslint-disable-next-line no-unused-vars
 exports.lambdaHandler = async (event, context) => {
     let response
@@ -14,13 +20,14 @@ exports.lambdaHandler = async (event, context) => {
             lockFile = Buffer.from(lockFile, 'base64').toString('utf-8')
         }
 
-        const packages = parseFile(lockFile)
+        const [packages, lockVersion] = parseFile(lockFile)
 
         response = {
             statusCode: 200,
             body: JSON.stringify(
                 {
                     packages,
+                    lockVersion,
                 },
                 null,
                 4

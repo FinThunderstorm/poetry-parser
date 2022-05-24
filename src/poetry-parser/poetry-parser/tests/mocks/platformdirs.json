@@ -2,7 +2,6 @@
     "name": "platformdirs",
     "description": "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\".",
     "optional": "false",
-    "pythonVersions": [">=3.7"],
     "dependencies": {
         "furo": {
             "name": "furo",

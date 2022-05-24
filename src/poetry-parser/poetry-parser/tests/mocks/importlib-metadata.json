@@ -2,7 +2,6 @@
     "name": "importlib-metadata",
     "description": "Read metadata from Python packages",
     "optional": "false",
-    "pythonVersions": [">=3.7"],
     "dependencies": {
         "typing-extensions": {
             "name": "typing-extensions",

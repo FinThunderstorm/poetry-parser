@@ -2,7 +2,6 @@
     "name": "pexpect",
     "description": "Pexpect allows easy control of interactive console applications.",
     "optional": "false",
-    "pythonVersions": ["*"],
     "dependencies": {
         "ptyprocess": {
             "name": "ptyprocess",
