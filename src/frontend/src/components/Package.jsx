@@ -1,19 +1,18 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
-
-import Typography from '@mui/material/Typography'
 import {
-    Grid,
-    Table,
-    TableCell,
-    TableHead,
-    TableBody,
-    TableRow,
     Divider,
-    TableContainer,
+    Grid,
     Paper,
+    Stack,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Typography,
 } from '@mui/material'
-import { useParams, Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getPackage } from '../reducers/packagesSlice'
 
@@ -21,8 +20,20 @@ const Package = () => {
     const params = useParams()
     const pack = useSelector((state) => getPackage(state, params.name))
 
+    if (pack === undefined) {
+        return (
+            <Paper elevation={6} sx={{ height: '80vh', m: 1, p: 2 }}>
+                <Stack alignItems="center" justifyContent="center">
+                    <Typography variant="button" sx={{ fontSize: '1.5rem' }}>
+                        😭 Error while selecting package.
+                    </Typography>
+                </Stack>
+            </Paper>
+        )
+    }
+
     return (
-        <Paper elevation={6} sx={{ height: '80vh', m: 1, p: 2 }}>
+        <Paper elevation={6} sx={{ height: '80vh', p: 2 }}>
             <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <Typography variant="button" sx={{ fontSize: '1.5rem' }}>
@@ -41,7 +52,7 @@ const Package = () => {
                             <Typography variant="button" color="text.secondary">
                                 Dependencies:
                             </Typography>
-                            <TableContainer sx={{ maxHeight: '65vh' }}>
+                            <TableContainer sx={{ height: '60vh' }}>
                                 <Table stickyHeader size="small">
                                     <TableHead>
                                         <TableRow key="head-row">
@@ -103,7 +114,7 @@ const Package = () => {
                             <Typography variant="button" color="text.secondary">
                                 Reverse dependencies:
                             </Typography>
-                            <TableContainer sx={{ maxHeight: '65vh' }}>
+                            <TableContainer sx={{ height: '60vh' }}>
                                 <Table stickyHeader size="small">
                                     <TableHead>
                                         <TableRow>

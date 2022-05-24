@@ -30,6 +30,7 @@ export const packagesSlice = createSlice({
         builder
             .addCase(parsePackages.pending, (state, action) => {
                 state.status = 'loading'
+                state.packages = {}
             })
             .addCase(parsePackages.fulfilled, (state, action) => {
                 state.status = 'succeeded'
@@ -46,4 +47,9 @@ export const { parse } = packagesSlice.actions
 
 export default packagesSlice.reducer
 
-export const getPackage = (state, name) => state.packages.packages[name]
+export const getPackage = (state, name) => {
+    if (!(name in state.packages.packages)) {
+        return undefined
+    }
+    return state.packages.packages[name]
+}

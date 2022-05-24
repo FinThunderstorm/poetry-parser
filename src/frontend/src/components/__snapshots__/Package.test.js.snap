@@ -1,8 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Package Package works with dependencies (cachecontrol) 1`] = `
+exports[`Package Package shows error if not found 1`] = `
 <div
   className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-5v787e-MuiPaper-root"
+>
+  <div
+    className="css-1z0rh7t-MuiStack-root"
+  >
+    <span
+      className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
+    >
+      😭 Error while selecting package.
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Package Package works with dependencies (cachecontrol) 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1dxebv4-MuiPaper-root"
 >
   <div
     className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -41,7 +57,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
         Dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -232,7 +248,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
         Reverse dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -268,7 +284,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
 
 exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-5v787e-MuiPaper-root"
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1dxebv4-MuiPaper-root"
 >
   <div
     className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -307,7 +323,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
         Dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -367,7 +383,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
         Reverse dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Paper, Stack, Typography } from '@mui/material'
 
 const NotFound = () => (
