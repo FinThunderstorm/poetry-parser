@@ -38,7 +38,7 @@ exports.lambdaHandler = async (event, context) => {
             },
         }
     } catch (err) {
-        console.error(err) // eslint-disable-line no-console
+        console.log(err) // eslint-disable-line no-console
         response = {
             statusCode: 400,
             body: JSON.stringify(

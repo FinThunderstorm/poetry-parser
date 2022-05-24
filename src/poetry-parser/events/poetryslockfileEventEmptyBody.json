@@ -1,0 +1,66 @@
+{
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "no-cache",
+    "Connection": "keep-alive",
+    "Content-Length": "76995",
+    "Content-Type": "text/plain",
+    "Host": "localhost:3000",
+    "Postman-Token": "c6693d37-1349-4354-aeac-fcf881b68d77",
+    "User-Agent": "PostmanRuntime/7.29.0",
+    "X-Forwarded-Port": "3000",
+    "X-Forwarded-Proto": "http"
+  },
+  "httpMethod": "POST",
+  "isBase64Encoded": false,
+  "multiValueHeaders": {
+    "Accept": ["*/*"],
+    "Accept-Encoding": ["gzip, deflate, br"],
+    "Cache-Control": ["no-cache"],
+    "Connection": ["keep-alive"],
+    "Content-Length": ["76995"],
+    "Content-Type": [
+      "multipart/form-data; boundary=--------------------------414714027404575614366377"
+    ],
+    "Host": ["localhost:3000"],
+    "Postman-Token": ["c6693d37-1349-4354-aeac-fcf881b68d77"],
+    "User-Agent": ["PostmanRuntime/7.29.0"],
+    "X-Forwarded-Port": ["3000"],
+    "X-Forwarded-Proto": ["http"]
+  },
+  "multiValueQueryStringParameters": null,
+  "path": "/parse",
+  "pathParameters": null,
+  "queryStringParameters": null,
+  "requestContext": {
+    "accountId": "123456789012",
+    "apiId": "1234567890",
+    "domainName": "localhost:3000",
+    "extendedRequestId": null,
+    "httpMethod": "POST",
+    "identity": {
+      "accountId": null,
+      "apiKey": null,
+      "caller": null,
+      "cognitoAuthenticationProvider": null,
+      "cognitoAuthenticationType": null,
+      "cognitoIdentityPoolId": null,
+      "sourceIp": "127.0.0.1",
+      "user": null,
+      "userAgent": "Custom User Agent String",
+      "userArn": null
+    },
+    "path": "/parse",
+    "protocol": "HTTP/1.1",
+    "requestId": "657f4092-4721-4093-ba42-c113706f0d0f",
+    "requestTime": "19/May/2022:10:50:19 +0000",
+    "requestTimeEpoch": 1652957419,
+    "resourceId": "123456",
+    "resourcePath": "/parse",
+    "stage": "Prod"
+  },
+  "resource": "/parse",
+  "stageVariables": null,
+  "version": "1.0"
+}
