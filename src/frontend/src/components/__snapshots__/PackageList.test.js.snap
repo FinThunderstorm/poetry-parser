@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PackageList PackageList not shows warning if lockVersion undefined 1`] = `
+Array [
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1r47xjj-MuiPaper-root"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
+      >
+        Packages:
+      </span>
+      <div
+        className="css-13bvbr1-MuiStack-root"
+      >
+        <a
+          className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+          href="/packages/atomicwrites"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          atomicwrites
+        </a>
+        <a
+          className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+          href="/packages/cachecontrol"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          cachecontrol
+        </a>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-13i4rnv-MuiGrid-root"
+  />,
+]
+`;
+
 exports[`PackageList PackageList shows error 1`] = `
 Array [
   <div
@@ -157,6 +222,102 @@ Array [
           tabIndex={0}
         >
           cachecontrol
+        </a>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-13i4rnv-MuiGrid-root"
+  />,
+]
+`;
+
+exports[`PackageList PackageList shows warning if not lockVersion 1.1 1`] = `
+Array [
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1r47xjj-MuiPaper-root"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
+      >
+        Packages:
+      </span>
+      <div
+        className="css-13bvbr1-MuiStack-root"
+      >
+        <div
+          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardWarning MuiAlert-standard css-rob5aa-MuiPaper-root-MuiAlert-root"
+          role="alert"
+        >
+          <div
+            className="MuiAlert-icon css-1ytlwq5-MuiAlert-icon"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+              data-testid="ReportProblemOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+              />
+            </svg>
+          </div>
+          <div
+            className="MuiAlert-message css-acap47-MuiAlert-message"
+          >
+            Currently supported poetry.lock -file version is 1.1, other versions might have errors in parsing.
+          </div>
+        </div>
+        <a
+          className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+          href="/packages/atomicwrites"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          atomicwrites
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+          href="/packages/cachecontrol"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          cachecontrol
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
         </a>
       </div>
     </div>

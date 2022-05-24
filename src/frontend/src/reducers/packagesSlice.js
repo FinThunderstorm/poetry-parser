@@ -1,8 +1,10 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
+/** parsePackages handles
+ * @param {ArrayBuffer} selectedFile - selected file
+ */
 export const parsePackages = createAsyncThunk(
     'packages/parsePackages',
     async (selectedFile) => {
@@ -14,10 +16,13 @@ export const parsePackages = createAsyncThunk(
     }
 )
 
+/** packagesSlice handles storing package information
+ */
 export const packagesSlice = createSlice({
     name: 'packages',
     initialState: {
         packages: {},
+        lockVersion: undefined,
         status: 'idle',
         error: null,
     },
@@ -28,13 +33,16 @@ export const packagesSlice = createSlice({
     },
     extraReducers(builder) {
         builder
-            .addCase(parsePackages.pending, (state, action) => {
+            .addCase(parsePackages.pending, (state) => {
                 state.status = 'loading'
                 state.packages = {}
+                state.lockVersion = undefined
+                state.error = null
             })
             .addCase(parsePackages.fulfilled, (state, action) => {
                 state.status = 'succeeded'
                 state.packages = action.payload.packages
+                state.lockVersion = action.payload.lockVersion
             })
             .addCase(parsePackages.rejected, (state, action) => {
                 state.status = 'failed'
@@ -47,6 +55,10 @@ export const { parse } = packagesSlice.actions
 
 export default packagesSlice.reducer
 
+/** getPackage finds wanted package from state
+ * @param {RootState} state - holds all information
+ * @param {string} name - name of package
+ */
 export const getPackage = (state, name) => {
     if (!(name in state.packages.packages)) {
         return undefined

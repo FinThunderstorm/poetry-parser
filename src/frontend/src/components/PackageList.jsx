@@ -3,9 +3,12 @@ import { Link, Outlet, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Alert, Button, Grid, Paper, Stack, Typography } from '@mui/material'
 
+/** PackageList gives list of all packages and offers links to more information
+ */
 const PackageList = () => {
     const packages = useSelector((state) => state.packages.packages)
     const status = useSelector((state) => state.packages.status)
+    const lockVersion = useSelector((state) => state.packages.lockVersion)
     const params = useParams()
 
     if (status === 'idle') {
@@ -32,6 +35,15 @@ const PackageList = () => {
                                 Error while parsing packages.
                             </Alert>
                         )}
+                        {status === 'succeeded' &&
+                            lockVersion !== '1.1' &&
+                            lockVersion !== undefined && (
+                                <Alert severity="warning">
+                                    Currently supported poetry.lock -file
+                                    version is 1.1, other versions might have
+                                    errors in parsing.
+                                </Alert>
+                            )}
                         {status === 'succeeded' &&
                             Object.values(packages).map((pack) => (
                                 <Button

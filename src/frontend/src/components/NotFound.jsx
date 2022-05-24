@@ -1,6 +1,8 @@
 import React from 'react'
 import { Paper, Stack, Typography } from '@mui/material'
 
+/** NotFound is used if given page is not found
+ */
 const NotFound = () => (
     <Paper elevation={6} sx={{ m: 1, mt: 3, p: 2 }}>
         <Stack spacing={2} alignItems="center">

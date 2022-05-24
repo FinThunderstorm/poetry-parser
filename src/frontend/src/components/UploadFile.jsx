@@ -7,6 +7,8 @@ import { Button, Grid, Paper, Stack, Typography } from '@mui/material'
 
 import { parsePackages } from '../reducers/packagesSlice'
 
+/** UploadFile handles poetry.lock -file upload
+ */
 const UploadFile = () => {
     const dispatch = useDispatch()
     const [selectedFile, setSelectedFile] = useState()

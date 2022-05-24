@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Button, Paper, Stack, Typography } from '@mui/material'
 
+/** Welcome shows welcoming words to application
+ */
 const Welcome = () => {
     const status = useSelector((state) => state.packages.status)
 

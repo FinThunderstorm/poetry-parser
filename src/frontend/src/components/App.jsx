@@ -7,6 +7,8 @@ import PackageList from './PackageList'
 import Layout from './Layout'
 import Package from './Package'
 
+/** App handles routing in frontend
+ */
 const App = () => (
     <Routes>
         <Route path="*" element={<Layout />}>
