@@ -61,6 +61,7 @@ jobs:
           start: npm run start:ci
           env: host=localhost,port=3000,REACT_APP_BACKEND_API=api/parse
           working-directory: ${{ env.workDir }}
+          wait-on: "http://localhost:3000/"
 
   deploy:
     runs-on: ubuntu-latest
