@@ -60,13 +60,7 @@ Array [
             aria-sort={null}
             className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
           >
-            <a
-              href="/packages/tottoroo"
-              onClick={[Function]}
-              title="reverseDependency-tottoroo"
-            >
-              tottoroo
-            </a>
+            tottoroo
           </td>
         </tr>
       </tbody>

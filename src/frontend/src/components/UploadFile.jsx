@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { styled } from '@mui/material/styles'
 import { Button, Grid, Paper, Stack, Typography } from '@mui/material'
 
 import { parsePackages } from '../reducers/packagesSlice'
@@ -11,20 +10,18 @@ import { parsePackages } from '../reducers/packagesSlice'
  */
 const UploadFile = () => {
     const dispatch = useDispatch()
-    const [selectedFile, setSelectedFile] = useState()
+    const [selectedFile, setSelectedFile] = useState(undefined)
     const navigate = useNavigate()
 
     const fileSelector = (event) => {
         setSelectedFile(event.target.files[0])
     }
     const handleSubmission = async () => {
-        dispatch(parsePackages(selectedFile))
-        navigate('/')
+        if (selectedFile) {
+            dispatch(parsePackages(selectedFile))
+            navigate('/')
+        }
     }
-
-    const Input = styled('input')({
-        display: 'none',
-    })
 
     return (
         <Grid item xs={12}>
@@ -38,7 +35,9 @@ const UploadFile = () => {
                     </Typography>
                     <Stack direction="row" spacing={2}>
                         <label htmlFor="poetry-lock">
-                            <Input
+                            <input
+                                hidden
+                                data-testid="poetry-lock"
                                 id="poetry-lock"
                                 type="file"
                                 name="file"

@@ -30,6 +30,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          name: Backend
           verbose: true
           working-directory: ${{ env.workDir }}
 
@@ -53,8 +54,15 @@ jobs:
         run: npm run prettier:ci
         working-directory: ${{ env.workDir }}
       - name: Run tests
-        run: npm test
+        run: npm run test:coverage
         working-directory: ${{ env.workDir }}
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: Frontend
+          verbose: true
+          working-directory: ${{ env.workDir }}
       - name: Run E2E tests
         uses: cypress-io/github-action@v2
         with:

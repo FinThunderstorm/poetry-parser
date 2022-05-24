@@ -35,7 +35,7 @@ describe('ReverseDependencies', () => {
             },
             {
                 name: 'tottoroo',
-                installed: true,
+                installed: false,
             },
         ]
         render(
