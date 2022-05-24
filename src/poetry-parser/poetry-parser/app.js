@@ -1,21 +1,18 @@
 const { parseFile } = require('./utils/parser')
 
-class BodyException extends Error {
-    constructor(message) {
-        super(message)
-        this.name = 'BodyException'
-        this.statusCode = 400
-        this.extMessage = '400 Bad Request'
-    }
-}
-
+/** lambdaHandler parses poetry.lock -file into JSON based on binary file input
+ *
+ * @param {*} event - AWS Lambda event
+ * @param {*} context - AWS Lamba context
+ * @returns {Object} - parsed file as JSON
+ */
 // eslint-disable-next-line no-unused-vars
 exports.lambdaHandler = async (event, context) => {
     let response
 
     try {
         if (event.body === null || event.body === undefined) {
-            throw new BodyException('Empty Body')
+            throw new Error('Empty Body')
         }
 
         let lockFile = event.body
@@ -23,13 +20,14 @@ exports.lambdaHandler = async (event, context) => {
             lockFile = Buffer.from(lockFile, 'base64').toString('utf-8')
         }
 
-        const packages = parseFile(lockFile)
+        const [packages, lockVersion] = parseFile(lockFile)
 
         response = {
             statusCode: 200,
             body: JSON.stringify(
                 {
                     packages,
+                    lockVersion,
                 },
                 null,
                 4
@@ -40,12 +38,12 @@ exports.lambdaHandler = async (event, context) => {
             },
         }
     } catch (err) {
-        console.error(err) // eslint-disable-line no-console
+        console.log(err) // eslint-disable-line no-console
         response = {
-            statusCode: err.statusCode,
+            statusCode: 400,
             body: JSON.stringify(
                 {
-                    error: err.extMessage,
+                    error: '400 Bad request',
                 },
                 null,
                 4

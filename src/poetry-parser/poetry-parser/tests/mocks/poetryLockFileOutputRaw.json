@@ -3,7 +3,6 @@
         "name": "atomicwrites",
         "description": "Atomic file writes.",
         "optional": "false",
-        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -11,14 +10,6 @@
         "name": "attrs",
         "description": "Classes Without Boilerplate",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*"
-        ],
         "dependencies": {
             "coverage[toml]": {
                 "name": "coverage[toml]",
@@ -105,7 +96,6 @@
         "name": "cachecontrol",
         "description": "httplib2 caching for requests",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "lockfile": {
                 "name": "lockfile",
@@ -136,7 +126,6 @@
         "name": "cachy",
         "description": "Cachy provides a simple yet effective caching library.",
         "optional": "false",
-        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
         "dependencies": {
             "redis": {
                 "name": "redis",
@@ -163,7 +152,6 @@
         "name": "certifi",
         "description": "Python package for providing Mozilla's CA Bundle.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -171,7 +159,6 @@
         "name": "cffi",
         "description": "Foreign Function Interface for Python calling C code.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "pycparser": {
                 "name": "pycparser",
@@ -185,7 +172,6 @@
         "name": "cfgv",
         "description": "Validate configuration and produce human readable error messages.",
         "optional": "false",
-        "pythonVersions": [">=3.6.1"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -193,7 +179,6 @@
         "name": "charset-normalizer",
         "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
         "optional": "false",
-        "pythonVersions": [">=3.5.0"],
         "dependencies": {
             "unicodedata2": {
                 "name": "unicodedata2",
@@ -208,7 +193,6 @@
         "name": "cleo",
         "description": "Cleo allows you to create beautiful and testable command-line interfaces.",
         "optional": "false",
-        "pythonVersions": [">=3.6", "<4.0"],
         "dependencies": {
             "crashtest": {
                 "name": "crashtest",
@@ -227,14 +211,6 @@
         "name": "colorama",
         "description": "Cross-platform colored terminal text.",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*"
-        ],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -242,7 +218,6 @@
         "name": "coverage",
         "description": "Code coverage measurement for Python",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "tomli": {
                 "name": "tomli",
@@ -257,7 +232,6 @@
         "name": "crashtest",
         "description": "Manage Python errors with ease",
         "optional": "false",
-        "pythonVersions": [">=3.6", "<4.0"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -265,7 +239,6 @@
         "name": "cryptography",
         "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "cffi": {
                 "name": "cffi",
@@ -399,7 +372,6 @@
         "name": "deepdiff",
         "description": "Deep Difference and Search of any Python object/data.",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "ordered-set": {
                 "name": "ordered-set",
@@ -437,7 +409,6 @@
         "name": "distlib",
         "description": "Distribution utilities",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -445,7 +416,6 @@
         "name": "dulwich",
         "description": "Python Git Library",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "certifi": {
                 "name": "certifi",
@@ -488,7 +458,6 @@
         "name": "entrypoints",
         "description": "Discover and load entry points from installed packages.",
         "optional": "false",
-        "pythonVersions": [">=2.7"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -496,7 +465,6 @@
         "name": "filelock",
         "description": "A platform independent file lock.",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "furo": {
                 "name": "furo",
@@ -553,7 +521,6 @@
         "name": "flatdict",
         "description": "Python module for interacting with nested dicts as a single level dict with delimited keys.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -561,14 +528,6 @@
         "name": "html5lib",
         "description": "HTML parser based on the WHATWG HTML specification",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*"
-        ],
         "dependencies": {
             "six": {
                 "name": "six",
@@ -605,7 +564,6 @@
         "name": "httpretty",
         "description": "HTTP client mock for Python",
         "optional": "false",
-        "pythonVersions": [">=3"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -613,7 +571,6 @@
         "name": "identify",
         "description": "File identification library for Python",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "ukkonen": {
                 "name": "ukkonen",
@@ -628,7 +585,6 @@
         "name": "idna",
         "description": "Internationalized Domain Names in Applications (IDNA)",
         "optional": "false",
-        "pythonVersions": [">=3.5"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -636,7 +592,6 @@
         "name": "importlib-metadata",
         "description": "Read metadata from Python packages",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "typing-extensions": {
                 "name": "typing-extensions",
@@ -751,7 +706,6 @@
         "name": "iniconfig",
         "description": "iniconfig: brain-dead simple config-ini parsing",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -759,7 +713,6 @@
         "name": "jeepney",
         "description": "Low-level, pure Python DBus protocol wrapper.",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "pytest": {
                 "name": "pytest",
@@ -810,7 +763,6 @@
         "name": "keyring",
         "description": "Store and access your passwords safely.",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "importlib-metadata": {
                 "name": "importlib-metadata",
@@ -905,7 +857,6 @@
         "name": "lockfile",
         "description": "Platform-independent file locking module",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -913,7 +864,6 @@
         "name": "msgpack",
         "description": "MessagePack (de)serializer.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -921,7 +871,6 @@
         "name": "mypy",
         "description": "Optional static typing for Python",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "mypy-extensions": {
                 "name": "mypy-extensions",
@@ -963,7 +912,6 @@
         "name": "mypy-extensions",
         "description": "Experimental type system extensions for programs checked with the mypy typechecker.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -971,7 +919,6 @@
         "name": "nodeenv",
         "description": "Node.js virtual environment builder",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -979,7 +926,6 @@
         "name": "ordered-set",
         "description": "An OrderedSet is a custom MutableSet that remembers its order, so that every",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "pytest": {
                 "name": "pytest",
@@ -1006,7 +952,6 @@
         "name": "packaging",
         "description": "Core utilities for Python packages",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "pyparsing": {
                 "name": "pyparsing",
@@ -1020,7 +965,6 @@
         "name": "pexpect",
         "description": "Pexpect allows easy control of interactive console applications.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "ptyprocess": {
                 "name": "ptyprocess",
@@ -1034,7 +978,6 @@
         "name": "pkginfo",
         "description": "Query metadatdata from sdists / bdists / installed packages.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "coverage": {
                 "name": "coverage",
@@ -1055,7 +998,6 @@
         "name": "platformdirs",
         "description": "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\".",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "furo": {
                 "name": "furo",
@@ -1112,7 +1054,6 @@
         "name": "pluggy",
         "description": "plugin and hook calling mechanisms for python",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "importlib-metadata": {
                 "name": "importlib-metadata",
@@ -1150,7 +1091,6 @@
         "name": "poetry-core",
         "description": "Poetry PEP 517 Build Backend",
         "optional": "false",
-        "pythonVersions": [">=3.7", "<4.0"],
         "dependencies": {
             "importlib-metadata": {
                 "name": "importlib-metadata",
@@ -1164,7 +1104,6 @@
         "name": "poetry-plugin-export",
         "description": "Poetry plugin to export the dependencies to various formats",
         "optional": "false",
-        "pythonVersions": [">=3.7", "<4.0"],
         "dependencies": {
             "poetry": {
                 "name": "poetry",
@@ -1178,7 +1117,6 @@
         "name": "pre-commit",
         "description": "A framework for managing and maintaining multi-language pre-commit hooks.",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "cfgv": {
                 "name": "cfgv",
@@ -1222,7 +1160,6 @@
         "name": "ptyprocess",
         "description": "Run a subprocess in a pseudo terminal",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1230,14 +1167,6 @@
         "name": "py",
         "description": "library with cross-python path, ini-parsing, io, code, log facilities",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*"
-        ],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1245,7 +1174,6 @@
         "name": "pycparser",
         "description": "C parser in Python",
         "optional": "false",
-        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*", "!=3.3.*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1253,7 +1181,6 @@
         "name": "pylev",
         "description": "A pure Python Levenshtein implementation that's not freaking GPL'd.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1261,7 +1188,6 @@
         "name": "pyparsing",
         "description": "pyparsing module - Classes and methods to define and execute parsing grammars",
         "optional": "false",
-        "pythonVersions": [">=3.6.8"],
         "dependencies": {
             "railroad-diagrams": {
                 "name": "railroad-diagrams",
@@ -1282,7 +1208,6 @@
         "name": "pytest",
         "description": "pytest: simple powerful testing with Python",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "atomicwrites": {
                 "name": "atomicwrites",
@@ -1372,14 +1297,6 @@
         "name": "pytest-cov",
         "description": "Pytest plugin for measuring coverage.",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*"
-        ],
         "dependencies": {
             "coverage": {
                 "name": "coverage",
@@ -1439,7 +1356,6 @@
         "name": "pytest-mock",
         "description": "Thin-wrapper around the mock package for easier use with pytest",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "pytest": {
                 "name": "pytest",
@@ -1471,7 +1387,6 @@
         "name": "pytest-sugar",
         "description": "pytest-sugar is a plugin for pytest that changes the default look and feel of pytest (e.g. progressbar, show tests that fail instantly).",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "packaging": {
                 "name": "packaging",
@@ -1495,7 +1410,6 @@
         "name": "pywin32-ctypes",
         "description": "",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1503,7 +1417,6 @@
         "name": "pyyaml",
         "description": "YAML parser and emitter for Python",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1511,15 +1424,6 @@
         "name": "requests",
         "description": "Python HTTP for Humans.",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*",
-            "!=3.5.*"
-        ],
         "dependencies": {
             "certifi": {
                 "name": "certifi",
@@ -1566,7 +1470,6 @@
         "name": "requests-toolbelt",
         "description": "A utility belt for advanced users of python-requests",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "requests": {
                 "name": "requests",
@@ -1580,7 +1483,6 @@
         "name": "secretstorage",
         "description": "Python bindings to FreeDesktop.org Secret Service API",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {
             "cryptography": {
                 "name": "cryptography",
@@ -1599,7 +1501,6 @@
         "name": "shellingham",
         "description": "Tool to Detect Surrounding Shell",
         "optional": "false",
-        "pythonVersions": ["!=3.0", "!=3.1", "!=3.2", "!=3.3", ">=2.6"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1607,7 +1508,6 @@
         "name": "six",
         "description": "Python 2 and 3 compatibility utilities",
         "optional": "false",
-        "pythonVersions": [">=2.7", "!=3.0.*", "!=3.1.*", "!=3.2.*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1615,7 +1515,6 @@
         "name": "termcolor",
         "description": "ANSII Color formatting for output in terminal.",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1623,7 +1522,6 @@
         "name": "toml",
         "description": "Python Library for Tom's Obvious, Minimal Language",
         "optional": "false",
-        "pythonVersions": [">=2.6", "!=3.0.*", "!=3.1.*", "!=3.2.*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1631,7 +1529,6 @@
         "name": "tomli",
         "description": "A lil' TOML parser",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1639,7 +1536,6 @@
         "name": "tomlkit",
         "description": "Style preserving TOML library",
         "optional": "false",
-        "pythonVersions": [">=3.6", "<4.0"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1647,14 +1543,6 @@
         "name": "tox",
         "description": "tox is a generic virtualenv management and test command line tool",
         "optional": "false",
-        "pythonVersions": [
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*",
-            ">=2.7"
-        ],
         "dependencies": {
             "colorama": {
                 "name": "colorama",
@@ -1780,7 +1668,6 @@
         "name": "typed-ast",
         "description": "a fork of Python 2 and 3 ast modules with type comment support",
         "optional": "false",
-        "pythonVersions": [">=3.6"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1788,7 +1675,6 @@
         "name": "types-requests",
         "description": "Typing stubs for requests",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {
             "types-urllib3": {
                 "name": "types-urllib3",
@@ -1802,7 +1688,6 @@
         "name": "types-urllib3",
         "description": "Typing stubs for urllib3",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1810,7 +1695,6 @@
         "name": "typing-extensions",
         "description": "Backported and Experimental Type Hints for Python 3.7+",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -1818,15 +1702,6 @@
         "name": "urllib3",
         "description": "HTTP library with thread-safe connection pooling, file post, and more.",
         "optional": "false",
-        "pythonVersions": [
-            ">=2.7",
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*",
-            "<4"
-        ],
         "dependencies": {
             "brotlicffi": {
                 "name": "brotlicffi",
@@ -1889,14 +1764,6 @@
         "name": "virtualenv",
         "description": "Virtual Python Environment builder",
         "optional": "false",
-        "pythonVersions": [
-            "!=3.0.*",
-            "!=3.1.*",
-            "!=3.2.*",
-            "!=3.3.*",
-            "!=3.4.*",
-            ">=2.7"
-        ],
         "dependencies": {
             "distlib": {
                 "name": "distlib",
@@ -2020,7 +1887,6 @@
         "name": "webencodings",
         "description": "Character encoding aliases for legacy web content",
         "optional": "false",
-        "pythonVersions": ["*"],
         "dependencies": {},
         "reverseDependencies": []
     },
@@ -2028,7 +1894,6 @@
         "name": "zipp",
         "description": "Backport of pathlib-compatible object wrapper for zip files",
         "optional": "false",
-        "pythonVersions": [">=3.7"],
         "dependencies": {
             "sphinx": {
                 "name": "sphinx",

@@ -2,7 +2,6 @@
     "name": "cachecontrol",
     "description": "httplib2 caching for requests",
     "optional": "false",
-    "pythonVersions": [">=3.6"],
     "dependencies": {
         "lockfile": {
             "name": "lockfile",

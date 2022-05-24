@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReverseDependencies ReverseDependencies renderes correctly 1`] = `
+Array [
+  <span
+    className="MuiTypography-root MuiTypography-button css-1jm68wq-MuiTypography-root"
+  >
+    Reverse dependencies:
+  </span>,
+  <div
+    className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
+  >
+    <table
+      className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
+      role={null}
+    >
+      <thead
+        className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeSmall css-1h37f49-MuiTableCell-root"
+            scope="col"
+          >
+            Name
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        role={null}
+      >
+        <tr
+          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            <a
+              href="/packages/pytest"
+              onClick={[Function]}
+              title="reverseDependency-pytest"
+            >
+              pytest
+            </a>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            <a
+              href="/packages/tottoroo"
+              onClick={[Function]}
+              title="reverseDependency-tottoroo"
+            >
+              tottoroo
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+]
+`;

@@ -121,7 +121,7 @@ describe('parsePackage works correctly', () => {
 describe('parseFile works correctly', () => {
     test('parseFile works correctly', () => {
         const result = parseFile(poetryInput.lockFile)
-        expect(result).toStrictEqual(poetryOutput)
+        expect(result).toStrictEqual([poetryOutput, '1.1'])
     })
 })
 

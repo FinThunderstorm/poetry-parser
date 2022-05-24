@@ -2,7 +2,6 @@
     "name": "pluggy",
     "description": "plugin and hook calling mechanisms for python",
     "optional": "false",
-    "pythonVersions": [">=3.6"],
     "dependencies": {
         "importlib-metadata": {
             "name": "importlib-metadata",

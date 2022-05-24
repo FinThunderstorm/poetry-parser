@@ -11,7 +11,7 @@ import PackageList from './PackageList'
 import packagesReducer from '../reducers/packagesSlice'
 
 describe('PackageList', () => {
-    const preloadedState = {
+    const packages = {
         packages: {
             packages: {
                 atomicwrites: {
@@ -71,10 +71,11 @@ describe('PackageList', () => {
             },
             status: 'succeeded',
             error: null,
+            lockVersion: '1.1',
         },
     }
 
-    const PackageListWrapper = ({ url }) => {
+    const PackageListWrapper = ({ url, preloadedState }) => {
         const store = configureStore({
             reducer: {
                 packages: packagesReducer,
@@ -94,8 +95,9 @@ describe('PackageList', () => {
         )
     }
 
-    test('PackageList works with reverse dependencies (atomicwrites)', () => {
-        render(<PackageListWrapper url="/packages" />)
+    test('PackageList shows packages', () => {
+        packages.packages.status = 'succeeded'
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
 
         const name = screen.getByText('Packages:', {
             exact: false,
@@ -110,8 +112,121 @@ describe('PackageList', () => {
         expect(atomicwrites).toBeDefined()
         expect(cachecontrol).toBeDefined()
 
+        const warning = screen.queryByText(
+            'Currently supported poetry.lock -file version is 1.1',
+            {
+                exact: false,
+            }
+        )
+        expect(warning).toBeNull()
+
         const tree = renderer
-            .create(<PackageListWrapper url="/packages" />)
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
+    test('PackageList shows nothing if idle', () => {
+        packages.packages.status = 'idle'
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
+
+        const name = screen.queryByText('Packages:', {
+            exact: false,
+        })
+        expect(name).toBeNull()
+
+        const tree = renderer
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
+    test('PackageList shows loading', () => {
+        packages.packages.status = 'loading'
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
+
+        const name = screen.getByText('Packages:', {
+            exact: false,
+        })
+        const loading = screen.getByText('Loading...', {
+            exact: false,
+        })
+
+        expect(name).toBeDefined()
+        expect(loading).toBeDefined()
+
+        const tree = renderer
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
+    test('PackageList shows error', () => {
+        packages.packages.status = 'failed'
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
+
+        const name = screen.getByText('Packages:', {
+            exact: false,
+        })
+        const error = screen.getByText('Error while parsing packages.', {
+            exact: false,
+        })
+
+        expect(name).toBeDefined()
+        expect(error).toBeDefined()
+
+        const tree = renderer
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
+    test('PackageList not shows warning if lockVersion undefined', () => {
+        packages.packages.status = 'succeeded'
+        packages.packages.lockVersion = undefined
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
+
+        const warning = screen.queryByText(
+            'Currently supported poetry.lock -file version is 1.1',
+            {
+                exact: false,
+            }
+        )
+        expect(warning).toBeNull()
+
+        const tree = renderer
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
+    test('PackageList shows warning if not lockVersion 1.1', () => {
+        packages.packages.status = 'succeeded'
+        packages.packages.lockVersion = '1.0'
+        render(<PackageListWrapper url="/packages" preloadedState={packages} />)
+
+        const warning = screen.getByText(
+            'Currently supported poetry.lock -file version is 1.1, other versions might have errors in parsing.',
+            {
+                exact: false,
+            }
+        )
+        expect(warning).toBeDefined()
+
+        const tree = renderer
+            .create(
+                <PackageListWrapper url="/packages" preloadedState={packages} />
+            )
             .toJSON()
         expect(tree).toMatchSnapshot()
     })

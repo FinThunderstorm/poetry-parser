@@ -2,35 +2,60 @@
 
 exports[`UploadFile UploadFile renderes correctly 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-crdtso-MuiPaper-root"
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
 >
   <div
-    className="css-1y48f0p-MuiStack-root"
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1p3yn26-MuiPaper-root"
   >
-    <span
-      className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
-    >
-      Upload poetry.lock -file
-    </span>
-    <p
-      className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-    />
     <div
-      className="css-e53awj-MuiStack-root"
+      className="css-1y48f0p-MuiStack-root"
     >
-      <label
-        htmlFor="contained-button-file"
+      <span
+        className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
       >
-        <input
-          className="css-1hyfx7x"
-          id="contained-button-file"
-          name="file"
-          onChange={[Function]}
-          type="file"
-        />
-        <span
-          className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+        Upload poetry.lock -file
+      </span>
+      <p
+        className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      />
+      <div
+        className="css-e53awj-MuiStack-root"
+      >
+        <label
+          htmlFor="poetry-lock"
+        >
+          <input
+            className="css-1hyfx7x"
+            id="poetry-lock"
+            name="file"
+            onChange={[Function]}
+            type="file"
+          />
+          <span
+            className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            Select file
+          </span>
+        </label>
+        <button
+          className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
           onBlur={[Function]}
+          onClick={[Function]}
           onContextMenu={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -42,33 +67,12 @@ exports[`UploadFile UploadFile renderes correctly 1`] = `
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
-          role="button"
           tabIndex={0}
+          type="button"
         >
-          Select file
-        </span>
-      </label>
-      <button
-        className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
-        disabled={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onContextMenu={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        Submit
-      </button>
+          Submit
+        </button>
+      </div>
     </div>
   </div>
 </div>

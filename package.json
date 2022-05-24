@@ -6,12 +6,8 @@
   "scripts": {
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": " "
-  },
   "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1"

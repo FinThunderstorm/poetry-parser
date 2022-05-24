@@ -148,4 +148,18 @@ describe('Package', () => {
             .toJSON()
         expect(tree).toMatchSnapshot()
     })
+
+    test('Package shows error if not found', () => {
+        render(<PackageWrapper url="/packages/invalid" />)
+
+        const error = screen.getByText('😭 Error while selecting package.', {
+            exact: false,
+        })
+        expect(error).toBeDefined()
+
+        const tree = renderer
+            .create(<PackageWrapper url="/packages/invalid" />)
+            .toJSON()
+        expect(tree).toMatchSnapshot()
+    })
 })

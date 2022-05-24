@@ -1,8 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Package Package shows error if not found 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1dxebv4-MuiPaper-root"
+>
+  <div
+    className="css-1z0rh7t-MuiStack-root"
+  >
+    <span
+      className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
+    >
+      😭 Error while selecting package.
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Package Package works with dependencies (cachecontrol) 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-5v787e-MuiPaper-root"
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1dxebv4-MuiPaper-root"
 >
   <div
     className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -33,7 +49,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
       />
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1khxqpa-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-1u95w8b-MuiGrid-root"
     >
       <span
         className="MuiTypography-root MuiTypography-button css-1jm68wq-MuiTypography-root"
@@ -41,7 +57,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
         Dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -75,6 +91,13 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
                 scope="col"
               >
                 Installed
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeSmall css-1h37f49-MuiTableCell-root"
+                scope="col"
+              >
+                Source
               </th>
               <th
                 aria-sort={null}
@@ -121,6 +144,12 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
               >
+                extras
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+              >
                 filecache
               </td>
             </tr>
@@ -151,6 +180,12 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
               >
                 ✅
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+              >
+                dependencies
               </td>
               <td
                 aria-sort={null}
@@ -188,6 +223,12 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+              >
+                dependencies
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
               />
             </tr>
             <tr
@@ -216,6 +257,12 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
               >
+                extras
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+              >
                 redis
               </td>
             </tr>
@@ -224,7 +271,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1khxqpa-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-l2k946-MuiGrid-root"
     >
       <span
         className="MuiTypography-root MuiTypography-button css-1jm68wq-MuiTypography-root"
@@ -232,7 +279,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
         Reverse dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -268,7 +315,7 @@ exports[`Package Package works with dependencies (cachecontrol) 1`] = `
 
 exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-5v787e-MuiPaper-root"
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-1dxebv4-MuiPaper-root"
 >
   <div
     className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -299,7 +346,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
       />
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1khxqpa-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-1u95w8b-MuiGrid-root"
     >
       <span
         className="MuiTypography-root MuiTypography-button css-1jm68wq-MuiTypography-root"
@@ -307,7 +354,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
         Dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
@@ -347,6 +394,13 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
                 className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeSmall css-1h37f49-MuiTableCell-root"
                 scope="col"
               >
+                Source
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeSmall css-1h37f49-MuiTableCell-root"
+                scope="col"
+              >
                 Category
               </th>
             </tr>
@@ -359,7 +413,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1khxqpa-MuiGrid-root"
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-l2k946-MuiGrid-root"
     >
       <span
         className="MuiTypography-root MuiTypography-button css-1jm68wq-MuiTypography-root"
@@ -367,7 +421,7 @@ exports[`Package Package works with reverse dependencies (atomicwrites) 1`] = `
         Reverse dependencies:
       </span>
       <div
-        className="MuiTableContainer-root css-ekfqj0-MuiTableContainer-root"
+        className="MuiTableContainer-root css-e2p4vx-MuiTableContainer-root"
       >
         <table
           className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
