@@ -6,12 +6,12 @@ import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
-import App from './App'
+import UploadFile from './UploadFile'
 
-import packagesReducer from './reducers/packagesSlice'
+import packagesReducer from '../reducers/packagesSlice'
 
-describe('App', () => {
-    const AppWrapper = ({ url }) => {
+describe('UploadFile', () => {
+    const UploadFileWrapper = ({ url }) => {
         const store = configureStore({
             reducer: {
                 packages: packagesReducer,
@@ -21,33 +21,26 @@ describe('App', () => {
             <MemoryRouter initialEntries={[url]}>
                 <Provider store={store}>
                     <Routes>
-                        <Route path="/" element={<App />} />
+                        <Route path="/">
+                            <Route path="upload" element={<UploadFile />} />
+                        </Route>
                     </Routes>
                 </Provider>
             </MemoryRouter>
         )
     }
 
-    test('App renderes correctly', () => {
-        render(<AppWrapper url="/" />)
+    test('UploadFile renderes correctly', () => {
+        render(<UploadFileWrapper url="/upload" />)
 
-        const home = screen.getByText('home', {
+        const title = screen.getByText('UPLOAD POETRY.LOCK -FILE', {
             exact: false,
         })
-        const title = screen.getByText('Welcome to poetry-parser!', {
-            exact: false,
-        })
-        const info = screen.getByText(
-            'Begin explorating your poetry.lock -file by uploading file.',
-            {
-                exact: false,
-            }
-        )
-        expect(home).toBeDefined()
         expect(title).toBeDefined()
-        expect(info).toBeDefined()
 
-        const tree = renderer.create(<AppWrapper url="/" />).toJSON()
+        const tree = renderer
+            .create(<UploadFileWrapper url="/upload" />)
+            .toJSON()
         expect(tree).toMatchSnapshot()
     })
 })

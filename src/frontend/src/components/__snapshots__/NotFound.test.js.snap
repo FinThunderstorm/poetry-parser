@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound NotFound renderes correctly 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 css-crdtso-MuiPaper-root"
+>
+  <div
+    className="css-1y48f0p-MuiStack-root"
+  >
+    <span
+      className="MuiTypography-root MuiTypography-button css-1sqoee-MuiTypography-root"
+    >
+      404 NOT FOUND
+    </span>
+    <p
+      className="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      Our pear eating robots was too lazy and could not catch page behind given url.
+    </p>
+  </div>
+</div>
+`;

@@ -3,15 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@aws-sdk/client-api-gateway": "^3.94.0",
         "@emotion/react": "^11.9.0",
         "@emotion/styled": "^11.8.1",
-        "@mui/base": "^5.0.0-alpha.81",
-        "@mui/icons-material": "^5.8.0",
-        "@mui/lab": "^5.0.0-alpha.82",
         "@mui/material": "^5.8.0",
         "@reduxjs/toolkit": "^1.8.1",
-        "aws-amplify": "^4.3.22",
         "axios": "^0.27.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -26,7 +21,9 @@
         "@redux-devtools/core": "^3.12.0",
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^12.1.4",
+        "babel-plugin-named-exports-order": "^0.0.2",
         "cypress": "^9.6.1",
+        "cypress-file-upload": "^5.0.8",
         "eslint": "^8.15.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
@@ -37,11 +34,14 @@
         "eslint-plugin-react": "^7.30.0",
         "eslint-plugin-react-hooks": "^4.5.0",
         "eslint-plugin-react-redux": "^4.0.0",
-        "prettier": "^2.6.2"
+        "prettier": "^2.6.2",
+        "prop-types": "^15.8.1",
+        "webpack": "^5.72.1"
     },
     "scripts": {
         "husky": "cd ../.. && husky install src/frontend/.husky",
         "start": "react-scripts start",
+        "start:ci": "REACT_APP_BACKEND_API=api/parse react-scripts start",
         "build": "react-scripts build",
         "test": "CI=true react-scripts test",
         "test:coverage": "CI=true react-scripts test --coverage",
@@ -58,6 +58,16 @@
         "extends": [
             "react-app",
             "react-app/jest"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
         ]
     },
     "browserslist": {
@@ -78,12 +88,7 @@
         "tabWidth": 4
     },
     "lint-staged": {
-        "*.js": [
-            "npm run lint:fix",
-            "npm run prettier"
-        ],
-        "*.jsx": [
-            "npm run updatesnapshots",
+        "*.{js,jsx}": [
             "npm run lint:fix",
             "npm run prettier"
         ],

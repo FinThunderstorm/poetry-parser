@@ -6,12 +6,12 @@ import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
-import App from './App'
+import Welcome from './Welcome'
 
-import packagesReducer from './reducers/packagesSlice'
+import packagesReducer from '../reducers/packagesSlice'
 
-describe('App', () => {
-    const AppWrapper = ({ url }) => {
+describe('Welcome', () => {
+    const WelcomeWrapper = ({ url }) => {
         const store = configureStore({
             reducer: {
                 packages: packagesReducer,
@@ -21,19 +21,16 @@ describe('App', () => {
             <MemoryRouter initialEntries={[url]}>
                 <Provider store={store}>
                     <Routes>
-                        <Route path="/" element={<App />} />
+                        <Route path="/" element={<Welcome />} />
                     </Routes>
                 </Provider>
             </MemoryRouter>
         )
     }
 
-    test('App renderes correctly', () => {
-        render(<AppWrapper url="/" />)
+    test('Welcome renderes correctly', () => {
+        render(<WelcomeWrapper url="/" />)
 
-        const home = screen.getByText('home', {
-            exact: false,
-        })
         const title = screen.getByText('Welcome to poetry-parser!', {
             exact: false,
         })
@@ -43,11 +40,10 @@ describe('App', () => {
                 exact: false,
             }
         )
-        expect(home).toBeDefined()
         expect(title).toBeDefined()
         expect(info).toBeDefined()
 
-        const tree = renderer.create(<AppWrapper url="/" />).toJSON()
+        const tree = renderer.create(<WelcomeWrapper url="/" />).toJSON()
         expect(tree).toMatchSnapshot()
     })
 })
