@@ -3,11 +3,9 @@
     "version": "0.0.1",
     "description": "Parser for poetry.lock files",
     "main": "app.js",
-    "repository": "",
     "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
-    "license": "",
+    "license": "MIT",
     "scripts": {
-        "husky": "cd ../../.. && husky install src/poetry-parser/poetry-parser/.husky",
         "test": "NODE_ENV=test jest --verbose",
         "test:coverage": "NODE_ENV=test jest --coverage --collectCoverageFrom=./**.{js,jsx}",
         "lint": "eslint .",

@@ -1,7 +1,8 @@
 {
     "name": "frontend",
     "version": "0.1.0",
-    "private": true,
+    "author": "Tuomas Alanen <tualanen@cs.helsinki.fi>",
+    "license": "MIT",
     "dependencies": {
         "@emotion/react": "^11.9.0",
         "@emotion/styled": "^11.8.1",
@@ -39,7 +40,6 @@
         "webpack": "^5.72.1"
     },
     "scripts": {
-        "husky": "cd ../.. && husky install src/frontend/.husky",
         "start": "react-scripts start",
         "start:ci": "REACT_APP_BACKEND_API=api/parse react-scripts start",
         "build": "react-scripts build",
