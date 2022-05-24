@@ -58,9 +58,8 @@ jobs:
       - name: Run E2E tests
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm start
-          env: host=localhost,port=3000
+          start: npm run start:ci
+          env: host=localhost,port=3000,REACT_APP_BACKEND_API=api/parse
           working-directory: ${{ env.workDir }}
 
   deploy:

@@ -3,9 +3,10 @@
         "plugin:react/recommended",
         "airbnb",
         "prettier",
-        "plugin:cypress/recommended"
+        "plugin:cypress/recommended",
+        "plugin:react-redux/recommended"
     ],
-    "plugins": ["react", "prettier", "cypress"],
+    "plugins": ["react", "prettier", "cypress", "react-redux"],
     "rules": {
         "prettier/prettier": [
             "error",
@@ -15,7 +16,12 @@
         "no-console": "error",
         "class-methods-use-this": "error",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": "off"
+        "react/jsx-filename-extension": "off",
+        "react/function-component-definition": [
+            2,
+            { "namedComponents": "arrow-function" }
+        ],
+        "react-redux/useSelector-prefer-selectors": "off"
     },
     "env": {
         "browser": true,
