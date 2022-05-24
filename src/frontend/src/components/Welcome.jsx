@@ -9,7 +9,6 @@ const Welcome = () => {
     const status = useSelector((state) => state.packages.status)
 
     if (status === 'succeeded' || status === 'loading') {
-        // eslint-disable-next-line react/jsx-no-useless-fragment
         return <></>
     }
     return (

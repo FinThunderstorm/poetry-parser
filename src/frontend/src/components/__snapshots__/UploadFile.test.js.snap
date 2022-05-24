@@ -25,7 +25,8 @@ exports[`UploadFile UploadFile renderes correctly 1`] = `
           htmlFor="poetry-lock"
         >
           <input
-            className="css-1hyfx7x"
+            data-testid="poetry-lock"
+            hidden={true}
             id="poetry-lock"
             name="file"
             onChange={[Function]}

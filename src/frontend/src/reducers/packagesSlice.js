@@ -12,6 +12,7 @@ export const parsePackages = createAsyncThunk(
         const response = await axios.post(url, selectedFile, {
             headers: { 'Content-Type': 'text/plain' },
         })
+
         return response.data
     }
 )
@@ -26,11 +27,7 @@ export const packagesSlice = createSlice({
         status: 'idle',
         error: null,
     },
-    reducers: {
-        parse: async (state, action) => {
-            state.packages = action.payload
-        },
-    },
+    reducers: {},
     extraReducers(builder) {
         builder
             .addCase(parsePackages.pending, (state) => {
@@ -50,8 +47,6 @@ export const packagesSlice = createSlice({
             })
     },
 })
-
-export const { parse } = packagesSlice.actions
 
 export default packagesSlice.reducer
 
