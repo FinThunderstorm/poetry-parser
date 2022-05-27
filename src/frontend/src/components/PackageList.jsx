@@ -44,20 +44,32 @@ const PackageList = () => {
                                 </Alert>
                             )}
                         {status === 'succeeded' &&
-                            Object.values(packages).map((pack) => (
-                                <Button
-                                    variant={
-                                        params.name === pack.name
-                                            ? 'contained'
-                                            : 'outlined'
+                            Object.values(packages)
+                                .sort((a, b) => {
+                                    const nameA = a.name.toLowerCase()
+                                    const nameB = b.name.toLowerCase()
+                                    if (nameA < nameB) {
+                                        return -1
                                     }
-                                    component={Link}
-                                    key={pack.name}
-                                    to={`/packages/${pack.name}`}
-                                >
-                                    {pack.name}
-                                </Button>
-                            ))}
+                                    if (nameA > nameB) {
+                                        return 1
+                                    }
+                                    return 0
+                                })
+                                .map((pack) => (
+                                    <Button
+                                        variant={
+                                            params.name === pack.name
+                                                ? 'contained'
+                                                : 'outlined'
+                                        }
+                                        component={Link}
+                                        key={pack.name}
+                                        to={`/packages/${pack.name}`}
+                                    >
+                                        {pack.name}
+                                    </Button>
+                                ))}
                     </Stack>
                 </Paper>
             </Grid>

@@ -151,6 +151,41 @@ Array [
             aria-sort={null}
             className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
           >
+            redis
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            ❌
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            ❌
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            extras
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
+            redis
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+          >
             <a
               href="/packages/requests"
               onClick={[Function]}
@@ -181,41 +216,6 @@ Array [
             aria-sort={null}
             className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
           />
-        </tr>
-        <tr
-          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-          role={null}
-        >
-          <td
-            aria-sort={null}
-            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-          >
-            redis
-          </td>
-          <td
-            aria-sort={null}
-            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-          >
-            ❌
-          </td>
-          <td
-            aria-sort={null}
-            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-          >
-            ❌
-          </td>
-          <td
-            aria-sort={null}
-            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-          >
-            extras
-          </td>
-          <td
-            aria-sort={null}
-            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-          >
-            redis
-          </td>
         </tr>
       </tbody>
     </table>

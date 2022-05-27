@@ -55,7 +55,7 @@
         "prettier": "npx prettier --write .",
         "prettier:ci": "npx prettier --check .",
         "cypress:open": "cypress open",
-        "updatesnapshots": "jest --updateSnapshot"
+        "updatesnapshots": "CI=true REACT_APP_BACKEND_API=/parse react-scripts test -u"
     },
     "eslintConfig": {
         "extends": [
