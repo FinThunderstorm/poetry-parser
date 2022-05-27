@@ -27,6 +27,13 @@ describe('Dependencies', () => {
 
     test('Dependencies renderes correctly', () => {
         const dependencies = {
+            redis: {
+                name: 'redis',
+                category: 'redis',
+                optional: true,
+                source: 'extras',
+                installed: false,
+            },
             lockfile: {
                 name: 'lockfile',
                 category: 'filecache',
@@ -45,13 +52,6 @@ describe('Dependencies', () => {
                 optional: false,
                 source: 'dependencies',
                 installed: true,
-            },
-            redis: {
-                name: 'redis',
-                category: 'redis',
-                optional: true,
-                source: 'extras',
-                installed: false,
             },
         }
         render(

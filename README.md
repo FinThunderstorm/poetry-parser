@@ -1,6 +1,8 @@
-# Poetry Parser
+# poetry-parser
 
-[![Poetry Parser CI](https://github.com/FinThunderstorm/poetry-parser/actions/workflows/poetry-parser.yml/badge.svg)](https://github.com/FinThunderstorm/poetry-parser/actions/workflows/poetry-parser.yml) [![codecov](https://codecov.io/gh/FinThunderstorm/poetry-parser/branch/master/graph/badge.svg?token=AQhbMDs7Kn)](https://codecov.io/gh/FinThunderstorm/poetry-parser)
+[![poetry-parser CI](https://github.com/FinThunderstorm/poetry-parser/actions/workflows/poetry-parser.yml/badge.svg)](https://github.com/FinThunderstorm/poetry-parser/actions/workflows/poetry-parser.yml) [![codecov](https://codecov.io/gh/FinThunderstorm/poetry-parser/branch/master/graph/badge.svg?token=AQhbMDs7Kn)](https://codecov.io/gh/FinThunderstorm/poetry-parser)
+
+![poetry-parser UI](./media/ui.png)
 
 Reaktor's pre-assignment for Autumn 2022 (https://www.reaktor.com/assignment-fall-2022-developers/)
 

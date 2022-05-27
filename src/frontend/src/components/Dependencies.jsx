@@ -29,32 +29,44 @@ const Dependencies = ({ dependencies }) => (
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {Object.values(dependencies).map((dependency) => (
-                        <TableRow key={`${dependency.name}-row`}>
-                            {dependency.installed ? (
+                    {Object.values(dependencies)
+                        .sort((a, b) => {
+                            const nameA = a.name.toLowerCase()
+                            const nameB = b.name.toLowerCase()
+                            if (nameA < nameB) {
+                                return -1
+                            }
+                            if (nameA > nameB) {
+                                return 1
+                            }
+                            return 0
+                        })
+                        .map((dependency) => (
+                            <TableRow key={`${dependency.name}-row`}>
+                                {dependency.installed ? (
+                                    <TableCell>
+                                        <Link
+                                            to={`/packages/${dependency.name}`}
+                                            title={`dependency-${dependency.name}`}
+                                        >
+                                            {dependency.name}
+                                        </Link>
+                                    </TableCell>
+                                ) : (
+                                    <TableCell>{dependency.name}</TableCell>
+                                )}
+
                                 <TableCell>
-                                    <Link
-                                        to={`/packages/${dependency.name}`}
-                                        title={`dependency-${dependency.name}`}
-                                    >
-                                        {dependency.name}
-                                    </Link>
+                                    {dependency.optional ? '❌' : '✅'}
                                 </TableCell>
-                            ) : (
-                                <TableCell>{dependency.name}</TableCell>
-                            )}
 
-                            <TableCell>
-                                {dependency.optional ? '❌' : '✅'}
-                            </TableCell>
-
-                            <TableCell>
-                                {dependency.installed ? '✅' : '❌'}
-                            </TableCell>
-                            <TableCell>{dependency.source}</TableCell>
-                            <TableCell>{dependency.category}</TableCell>
-                        </TableRow>
-                    ))}
+                                <TableCell>
+                                    {dependency.installed ? '✅' : '❌'}
+                                </TableCell>
+                                <TableCell>{dependency.source}</TableCell>
+                                <TableCell>{dependency.category}</TableCell>
+                            </TableRow>
+                        ))}
                 </TableBody>
             </Table>
         </TableContainer>

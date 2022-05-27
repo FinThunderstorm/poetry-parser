@@ -14,25 +14,6 @@ describe('PackageList', () => {
     const packages = {
         packages: {
             packages: {
-                atomicwrites: {
-                    name: 'atomicwrites',
-                    description: 'Atomic file writes.',
-                    optional: 'false',
-                    pythonVersions: [
-                        '>=2.7',
-                        '!=3.0.*',
-                        '!=3.1.*',
-                        '!=3.2.*',
-                        '!=3.3.*',
-                    ],
-                    dependencies: {},
-                    reverseDependencies: [
-                        {
-                            name: 'pytest',
-                            installed: true,
-                        },
-                    ],
-                },
                 cachecontrol: {
                     name: 'cachecontrol',
                     description: 'httplib2 caching for requests',
@@ -67,6 +48,25 @@ describe('PackageList', () => {
                         },
                     },
                     reverseDependencies: [],
+                },
+                atomicwrites: {
+                    name: 'atomicwrites',
+                    description: 'Atomic file writes.',
+                    optional: 'false',
+                    pythonVersions: [
+                        '>=2.7',
+                        '!=3.0.*',
+                        '!=3.1.*',
+                        '!=3.2.*',
+                        '!=3.3.*',
+                    ],
+                    dependencies: {},
+                    reverseDependencies: [
+                        {
+                            name: 'pytest',
+                            installed: true,
+                        },
+                    ],
                 },
             },
             status: 'succeeded',

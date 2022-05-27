@@ -30,12 +30,12 @@ describe('ReverseDependencies', () => {
     test('ReverseDependencies renderes correctly', () => {
         const reverseDependencies = [
             {
-                name: 'pytest',
-                installed: true,
-            },
-            {
                 name: 'tottoroo',
                 installed: false,
+            },
+            {
+                name: 'pytest',
+                installed: true,
             },
         ]
         render(
